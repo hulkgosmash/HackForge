@@ -1,0 +1,107 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function updateCodeBlocks() {
+            // Get user inputs (fallback to default values if empty)
+            let ip = document.getElementById("target-ip")?.value || "127.0.0.1";
+            let attackerIp = document.getElementById("attacker-ip")?.value || "192.168.1.100";
+            let user = document.getElementById("username")?.value || "admin";
+            let password = document.getElementById("password")?.value || "password";
+    
+            // Select all <pre><code> blocks
+            document.querySelectorAll("pre code").forEach((codeBlock) => {
+                let originalCode = codeBlock.getAttribute("data-original");
+    
+                // Store the original code to prevent multiple replacements
+                if (!originalCode) {
+                    originalCode = codeBlock.innerHTML;
+                    codeBlock.setAttribute("data-original", originalCode);
+                }
+    
+                // Decode HTML entities (important for Hugo)
+                let decodedCode = originalCode
+                    .replace(/&lt;/g, "<")
+                    .replace(/&gt;/g, ">")
+                    .replace(/&amp;/g, "&");
+    
+                // Replace variables with user input
+                let updatedCode = decodedCode
+                    .replace(/\$ip/g, ip)
+                    .replace(/\$attacker-ip/g, attackerIp)
+                    .replace(/\$user/g, user)
+                    .replace(/\$password/g, password);
+    
+                // Update the displayed code block with the new values
+                codeBlock.innerHTML = updatedCode;
+    
+                // ✅ Store the updated text in the closest <pre> element for copying
+                let preBlock = codeBlock.closest("pre");
+                if (preBlock) {
+                    preBlock.setAttribute("data-updated-code", updatedCode);
+                }
+            });
+    
+            // ✅ Manually add new copy buttons after updating
+            addCopyButtons();
+        }
+    
+        // Attach event listener to the Update button
+        document.getElementById("update-button").addEventListener("click", updateCodeBlocks);
+    
+        // ✅ Remove Hugo Relearn’s default copy buttons and add our own
+        function addCopyButtons() {
+            document.querySelectorAll("pre").forEach((preElement) => {
+                // Remove existing copy button if present
+                let oldCopyButton = preElement.querySelector(".custom-copy-button");
+                if (oldCopyButton) {
+                    oldCopyButton.remove();
+                }
+    
+                // Create a new copy button
+                let copyButton = document.createElement("button");
+                copyButton.className = "custom-copy-button";
+                copyButton.innerText = "Copy";
+                copyButton.style.position = "absolute";
+                copyButton.style.top = "10px";
+                copyButton.style.right = "10px";
+                copyButton.style.padding = "5px 10px";
+                copyButton.style.fontSize = "14px";
+                copyButton.style.cursor = "pointer";
+                copyButton.style.backgroundColor = "#202020";
+                copyButton.style.border = "1px solid black";
+                copyButton.style.borderRadius = "4px";
+    
+                // Add copy button to the <pre> block
+                preElement.style.position = "relative"; // Ensure position for absolute button placement
+                preElement.appendChild(copyButton);
+    
+                // ✅ Copy-to-Clipboard behavior (removes extra markup)
+                copyButton.addEventListener("click", function () {
+                    let modifiedCode = preElement.getAttribute("data-updated-code") || "";
+
+                    if (modifiedCode) {
+                        let cleanCode = stripHTML(modifiedCode); // Remove any HTML markup before copying
+
+                        navigator.clipboard.writeText(cleanCode).then(() => {
+                            copyButton.innerText = "Copied!";
+                            setTimeout(() => {
+                                copyButton.innerText = "Copy";
+                            }, 2000);
+                        }).catch(err => console.error("Copy failed:", err));
+                    }
+                });
+
+                // ✅ Function to strip out HTML and return plain text
+                function stripHTML(html) {
+                    let tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = html;
+                    return tempDiv.textContent || tempDiv.innerText || "";
+                }
+
+            });
+        }
+    
+        // Run updateCodeBlocks once on page load
+        setTimeout(updateCodeBlocks, 500);
+    });
+    </script>
+    

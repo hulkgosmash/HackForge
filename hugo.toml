@@ -1,0 +1,11 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'HackForge'
+theme='hugo-theme-relearn'
+[params]
+  showRightSidebar = true
+  disableHoverBlockCopyToClipBoard=true
+  disableCopyToClipBoard = true
+  [[params.themeVariant]]
+  identifier = 'zen-dark'
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Services :: HackForge</title><link>https://example.org/enumeration/hosts/services/index.html</link><description/><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/enumeration/hosts/services/index.xml" rel="self" type="application/rss+xml"/><item><title>File Transfer Protocol (FTP)</title><link>https://example.org/enumeration/hosts/services/file-transfer-protocol-ftp/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/enumeration/hosts/services/file-transfer-protocol-ftp/index.html</guid><description>General Create an active connection
+ftp $ip Create a passive connection (If you can’t see files it may help)
+ftp -p $ip List all files
+ls -lah Download multiple files
+prompt mget * Download all files using wget
+wget -r ftp://$user:$password@$ip/ View the directory contents with curl
+curl -s -v 'ftp://$user:$password@$ip/' View directory contents with curl in passive mode
+curl -s -v -P - 'ftp://$user:$password@$ip/' Upload a file with curl</description></item><item><title>Server Message Block (SMB)</title><link>https://example.org/enumeration/hosts/services/server-message-block-smb/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/enumeration/hosts/services/server-message-block-smb/index.html</guid><description>Initial Scans Netbios scan
+nbtscan -r $ip Enumerate host name
+nmblookup -A $ip List Shares #1 (specifying guest account)
+smbmap -H $ip -u guest List Shares #2
+smbclient -L \\$ip List Shares #3
+crackmapexec smb $ip --shares List Shares with credentials
+smbmap -u $user -p $password -R -H $ip Exhaustive Scan
+enum4linux -a -M -l -d $ip Check Null Sessions
+smbmap -H $ip Check Null Sessions</description></item></channel></rss>
