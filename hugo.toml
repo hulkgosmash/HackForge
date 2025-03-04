@@ -2,6 +2,8 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'HackForge'
 theme='hugo-theme-relearn'
+relativeURLs = true
+canonifyURLs = true
 #relativeURLs = true
 [params]
   showRightSidebar = true
