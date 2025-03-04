@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'HackForge'
 theme='hugo-theme-relearn'
 relativeURLs = true
-baseURL: "https://hulkgosmash.github.io/HackForge/"
+baseURL = 'https://hulkgosmash.github.io/HackForge/'
 [params]
   showRightSidebar = true
   disableHoverBlockCopyToClipBoard=true
