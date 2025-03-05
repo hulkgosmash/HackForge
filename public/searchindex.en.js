@@ -1,5 +1,13 @@
 var relearn_searchindex = [
   {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance \u003e  Service Enumeration",
+    "content": "Nmap DNS Enumeration Brute-force subdomains\nnmap -p 53 --script dns-brute $ip Extract name server details\nnmap -p 53 --script dns-nsid $ip Comprehensive scripts\nnmap -n --script \"(default and *dns*) or fcrdns or dns-srv-enum or dns-random-txid or dns-random-srcport\" $ip Manual DNS Enumeration General Get all available DNS records\ndig $ip ANY Perform DNS lookup\nhost -a $ip Retrieve all DNS records\nnslookup -query=ANY $ip Regular DNS request\ndig ANY @$ip $domain IPv6 DNS request\ndig AAAA @$ip $domain Get TXT Records\ndig TXT @$ip $domain Get MX Records\ndig MX @$ip $domain Asks the DNS server at for the name server (NS) records of the specified $domain\ndig NS @$ip $domain Reverse lookup\ndig -x 192.168.0.2 @$ip Reverse IPv6 lookup\ndig -x 2a00:1450:400c:c06::93 @$ip Zone Transfer Try zone transfer without domain\ndig axfr @$ip Try zone transfer guessing the domain\ndig axfr @$ip $domain Will try to perform a zone transfer against every authoritative name server and if this doesn’t work, will launch a dictionary attack\nfierce --domain $domain --dns-servers $ip DNSRecon DNS reverse of all of the addresses\ndnsrecon -r 127.0.0.0/24 -n $ip DNS reverse of all of the addresses\ndnsrecon -r 127.0.1.0/24 -n $ip DNS reverse of all of the addresses\ndnsrecon -r $ip/24 -n $ip Zone transfer\ndnsrecon -d $domain -a -n $ip",
+    "description": "Nmap DNS Enumeration Brute-force subdomains\nnmap -p 53 --script dns-brute $ip Extract name server details\nnmap -p 53 --script dns-nsid $ip Comprehensive scripts\nnmap -n --script \"(default and *dns*) or fcrdns or dns-srv-enum or dns-random-txid or dns-random-srcport\" $ip Manual DNS Enumeration General Get all available DNS records\ndig $ip ANY Perform DNS lookup\nhost -a $ip Retrieve all DNS records\nnslookup -query=ANY $ip Regular DNS request\ndig ANY @$ip $domain IPv6 DNS request",
+    "tags": [],
+    "title": "Domain Name System (DNS)",
+    "uri": "/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/dns/index.html"
+  },
+  {
     "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Passive Reconnaissance",
     "content": "Search Engines \u0026 Advanced Queries Google Dorking Search within a specific site\nsite:$ip Find open directories\nintitle:\"index of\" Find open directories\nintitle:\"index of\" Search for specific file types\nfiletype:pdf Find admin panels\ninurl:admin View cached pages\ncache:$ip Search for emails\n\"$user@gmail.com\" Alternative Search Engines DuckDuckGo – Privacy-focused search\nBing/Yandex – Different indexing results\nShodan – IoT \u0026 network scanning\nSocial Media OSINT User Enumeration Facebook:\nsite:facebook.com \"$user\" Twitter\nsite:twitter.com \"@$user\" LinkedIn\nsite:linkedin.com/in/ \"$user\" Instagram\nsite:instagram.com \"@$user\" Tools for Social Media Analysis Sherlock – Username lookup\nTwint – Twitter scraping\nSocinvestigate – Social media OSINT\nDark Web OSINT Tools \u0026 Resources OnionSearch – Search .onion sites\nAhmia – Dark web search engine\nTor2Web – Access .onion without Tor\nPeople \u0026 Address Lookups General Person Search Pipl – People search engine\nSpokeo – Reverse lookup\nPeekYou – Social profile aggregation\nGeolocation \u0026 Maps Google Earth – Satellite imagery\nGeoGuessr – Geolocation challenge\nIP2Location – Locate IP addresses\nImage \u0026 Metadata Analysis Reverse Image Search Google Reverse Image – Find similar images\nYandex Images – Strong image search\nTineye – Reverse image search\nMetadata Extraction ExifTool – Extract EXIF data\nFotoForensics – Image analysis\nJeffrey’s Image Metadata Viewer – View hidden data\nOSINT Automation Tools SpiderFoot – Automated OSINT framework\nMaltego – Graph-based link analysis\nRecon-ng – Web reconnaissance\ntheHarvester – Email, subdomain \u0026 IP reconnaissance",
     "description": "Search Engines \u0026 Advanced Queries Google Dorking Search within a specific site\nsite:$ip Find open directories\nintitle:\"index of\" Find open directories\nintitle:\"index of\" Search for specific file types\nfiletype:pdf Find admin panels\ninurl:admin View cached pages\ncache:$ip Search for emails\n\"$user@gmail.com\" Alternative Search Engines DuckDuckGo – Privacy-focused search\nBing/Yandex – Different indexing results\nShodan – IoT \u0026 network scanning\nSocial Media OSINT User Enumeration Facebook:",
@@ -32,20 +40,28 @@ var relearn_searchindex = [
     "uri": "/reconnaissance_info_gathering/active_reconnaissance/index.html"
   },
   {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering",
+    "content": "Port Scanning (Nmap, Masscan)\nService Enumeration\nBanner_Grabbing",
+    "description": "Port Scanning (Nmap, Masscan)\nService Enumeration\nBanner_Grabbing",
+    "tags": [],
+    "title": "Active Reconnaissance",
+    "uri": "/reconnaissance_info_gathering/tool-specific/index.html"
+  },
+  {
     "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance",
-    "content": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains\nnmap -p 53 --script dns-brute $ip Extract name server details\nnmap -p 53 --script dns-nsid $ip Manual DNS Enumeration Get all available DNS records\ndig $ip ANY Perform DNS lookup\nhost -a $ip Retrieve all DNS records\nnslookup -query=ANY $ip FTP (File Transfer Protocol) Enumeration Nmap FTP Scripts Check for anonymous login\nnmap -p 21 --script ftp-anon $ip Check for VSFTPD vulnerabilities\nnmap -p 21 --script ftp-vsftpd-backdoor $ip Manual FTP Enumeration Connect to FTP\nftp $ip Grab FTP banner\nnc -v $ip 21 Banner grabbing\ntelnet $ip 21",
-    "description": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains",
+    "content": "Port Scanning (Nmap, Masscan)\nService Enumeration\nBanner_Grabbing",
+    "description": "Port Scanning (Nmap, Masscan)\nService Enumeration\nBanner_Grabbing",
+    "tags": [],
+    "title": "Active Reconnaissance",
+    "uri": "/reconnaissance_info_gathering/tool-specific/nmap/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance",
+    "content": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip",
+    "description": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip",
     "tags": [],
     "title": "Service Enumeration",
     "uri": "/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance \u003e  Service Enumeration",
-    "content": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains\nnmap -p 53 --script dns-brute $ip Extract name server details\nnmap -p 53 --script dns-nsid $ip Manual DNS Enumeration Get all available DNS records\ndig $ip ANY Perform DNS lookup\nhost -a $ip Retrieve all DNS records\nnslookup -query=ANY $ip FTP (File Transfer Protocol) Enumeration Nmap FTP Scripts Check for anonymous login\nnmap -p 21 --script ftp-anon $ip Check for VSFTPD vulnerabilities\nnmap -p 21 --script ftp-vsftpd-backdoor $ip Manual FTP Enumeration Connect to FTP\nftp $ip Grab FTP banner\nnc -v $ip 21 Banner grabbing\ntelnet $ip 21",
-    "description": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains",
-    "tags": [],
-    "title": "Service Enumeration",
-    "uri": "/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/dns/index.html"
   },
   {
     "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Passive Reconnaissance",

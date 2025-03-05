@@ -5,46 +5,30 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.4.1+521de1e32e5e1028825729e00e85cc56e078c02a">
-    <meta name="description" content="Basic WHOIS Lookup Command-Line WHOIS Basic domain WHOIS lookup
-whois $ip Query a specific WHOIS server
-whois -h whois.verisign-grs.com $ip Show detailed results (Linux)
-whois --verbose $ip Online WHOIS Services Whois Lookup (ICANN)
-Whois Domain Tools
-WhoXY
-Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip dig NS $ip host -t ns $ip Query MX Records (Mail Servers) nslookup -type=MX $ip dig MX $ip host -t mx $ip Query TXT Records (SPF, DKIM, DMARC, etc.) nslookup -type=TXT $ip dig TXT $ip host -t txt $ip Subdomain Enumeration Brute-Force Subdomains sublist3r -d $ip amass enum -d $ip assetfinder --subs-only $ip dnsrecon -d $ip -t brt Passive Subdomain Enumeration crt.sh → Certificate Transparency logs">
+    <meta name="description" content="Port Scanning (Nmap, Masscan)
+Service Enumeration
+Banner_Grabbing">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="WHOIS & Domain Enumeration :: HackForge">
-    <meta name="twitter:description" content="Basic WHOIS Lookup Command-Line WHOIS Basic domain WHOIS lookup
-whois $ip Query a specific WHOIS server
-whois -h whois.verisign-grs.com $ip Show detailed results (Linux)
-whois --verbose $ip Online WHOIS Services Whois Lookup (ICANN)
-Whois Domain Tools
-WhoXY
-Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip dig NS $ip host -t ns $ip Query MX Records (Mail Servers) nslookup -type=MX $ip dig MX $ip host -t mx $ip Query TXT Records (SPF, DKIM, DMARC, etc.) nslookup -type=TXT $ip dig TXT $ip host -t txt $ip Subdomain Enumeration Brute-Force Subdomains sublist3r -d $ip amass enum -d $ip assetfinder --subs-only $ip dnsrecon -d $ip -t brt Passive Subdomain Enumeration crt.sh → Certificate Transparency logs">
-    <meta property="og:url" content="http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html">
+    <meta name="twitter:title" content="Active Reconnaissance :: HackForge">
+    <meta name="twitter:description" content="Port Scanning (Nmap, Masscan)
+Service Enumeration
+Banner_Grabbing">
+    <meta property="og:url" content="http://localhost:1313/reconnaissance_info_gathering/tool-specific/masscan/index.html">
     <meta property="og:site_name" content="HackForge">
-    <meta property="og:title" content="WHOIS & Domain Enumeration :: HackForge">
-    <meta property="og:description" content="Basic WHOIS Lookup Command-Line WHOIS Basic domain WHOIS lookup
-whois $ip Query a specific WHOIS server
-whois -h whois.verisign-grs.com $ip Show detailed results (Linux)
-whois --verbose $ip Online WHOIS Services Whois Lookup (ICANN)
-Whois Domain Tools
-WhoXY
-Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip dig NS $ip host -t ns $ip Query MX Records (Mail Servers) nslookup -type=MX $ip dig MX $ip host -t mx $ip Query TXT Records (SPF, DKIM, DMARC, etc.) nslookup -type=TXT $ip dig TXT $ip host -t txt $ip Subdomain Enumeration Brute-Force Subdomains sublist3r -d $ip amass enum -d $ip assetfinder --subs-only $ip dnsrecon -d $ip -t brt Passive Subdomain Enumeration crt.sh → Certificate Transparency logs">
+    <meta property="og:title" content="Active Reconnaissance :: HackForge">
+    <meta property="og:description" content="Port Scanning (Nmap, Masscan)
+Service Enumeration
+Banner_Grabbing">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="WHOIS & Domain Enumeration :: HackForge">
-    <meta itemprop="description" content="Basic WHOIS Lookup Command-Line WHOIS Basic domain WHOIS lookup
-whois $ip Query a specific WHOIS server
-whois -h whois.verisign-grs.com $ip Show detailed results (Linux)
-whois --verbose $ip Online WHOIS Services Whois Lookup (ICANN)
-Whois Domain Tools
-WhoXY
-Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip dig NS $ip host -t ns $ip Query MX Records (Mail Servers) nslookup -type=MX $ip dig MX $ip host -t mx $ip Query TXT Records (SPF, DKIM, DMARC, etc.) nslookup -type=TXT $ip dig TXT $ip host -t txt $ip Subdomain Enumeration Brute-Force Subdomains sublist3r -d $ip amass enum -d $ip assetfinder --subs-only $ip dnsrecon -d $ip -t brt Passive Subdomain Enumeration crt.sh → Certificate Transparency logs">
-    <meta itemprop="wordCount" content="250">
-    <title>WHOIS &amp; Domain Enumeration :: HackForge</title>
-    <link href="../../../reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.xml" rel="alternate" type="application/rss+xml" title="WHOIS &amp; Domain Enumeration :: HackForge">
+    <meta itemprop="name" content="Active Reconnaissance :: HackForge">
+    <meta itemprop="description" content="Port Scanning (Nmap, Masscan)
+Service Enumeration
+Banner_Grabbing">
+    <meta itemprop="wordCount" content="7">
+    <title>Active Reconnaissance :: HackForge</title>
+    <link href="../../../reconnaissance_info_gathering/tool-specific/masscan/index.xml" rel="alternate" type="application/rss+xml" title="Active Reconnaissance :: HackForge">
     <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1741173549" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1741173549" rel="stylesheet"></noscript>
     <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1741173549" rel="stylesheet">
     <link href="../../../css/theme.css?1741173549" rel="stylesheet">
@@ -109,7 +93,7 @@ Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html disableHoverBlockCopyToClipBoard" data-url="../../../reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html">
+  <body class="mobile-support html disableHoverBlockCopyToClipBoard" data-url="../../../reconnaissance_info_gathering/tool-specific/masscan/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -120,43 +104,7 @@ Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip
             </div>
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-<nav class="TableOfContents">
-  <ul>
-    <li><a href="#basic-whois-lookup">Basic WHOIS Lookup</a>
-      <ul>
-        <li><a href="#command-line-whois">Command-Line WHOIS</a></li>
-        <li><a href="#online-whois-services">Online WHOIS Services</a></li>
-      </ul>
-    </li>
-    <li><a href="#extracting-nameservers--dns-records">Extracting Nameservers &amp; DNS Records</a>
-      <ul>
-        <li><a href="#query-nameservers">Query Nameservers</a></li>
-        <li><a href="#query-mx-records-mail-servers">Query MX Records (Mail Servers)</a></li>
-        <li><a href="#query-txt-records-spf-dkim-dmarc-etc">Query TXT Records (SPF, DKIM, DMARC, etc.)</a></li>
-      </ul>
-    </li>
-    <li><a href="#subdomain-enumeration">Subdomain Enumeration</a>
-      <ul>
-        <li><a href="#brute-force-subdomains">Brute-Force Subdomains</a></li>
-        <li><a href="#passive-subdomain-enumeration">Passive Subdomain Enumeration</a></li>
-      </ul>
-    </li>
-    <li><a href="#zone-transfer-axfr-attack-check">Zone Transfer (AXFR Attack Check)</a>
-      <ul>
-        <li><a href="#try-zone-transfer-if-misconfigured">Try Zone Transfer (If Misconfigured)</a></li>
-      </ul>
-    </li>
-    <li><a href="#reverse-dns-lookup">Reverse DNS Lookup</a>
-      <ul>
-        <li><a href="#find-domain-associated-with-an-ip">Find Domain Associated with an IP</a></li>
-        <li><a href="#find-subdomains-via-reverse-lookups">Find Subdomains via Reverse Lookups</a></li>
-      </ul>
-    </li>
-    <li><a href="#online-dns--whois-tools">Online DNS &amp; WHOIS Tools</a></li>
-    <li><a href="#automation--osint-tools-for-domain-intelligence">Automation &amp; OSINT Tools for Domain Intelligence</a></li>
-  </ul>
-</nav>
+                <div class="topbar-content-wrapper"> 
                 </div>
               </div>
             </div>
@@ -164,13 +112,13 @@ Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../index.html"><span itemprop="name">HackForge</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../reconnaissance_info_gathering/index.html"><span itemprop="name">1. Reconnaissance &amp; Information Gathering</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../reconnaissance_info_gathering/passive_reconnaissance/index.html"><span itemprop="name">Passive Reconnaissance</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">WHOIS &amp; Domain Enumeration</span><meta itemprop="position" content="4"></li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../reconnaissance_info_gathering/tool-specific/index.html"><span itemprop="name">Tool-Specific Reconnaissance</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Active Reconnaissance</span><meta itemprop="position" content="4"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../reconnaissance_info_gathering/passive_reconnaissance/osint/index.html" title="OSINT (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../reconnaissance_info_gathering/tool-specific/censys/index.html" title="Active Reconnaissance (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html" title="Email Enumeration (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../reconnaissance_info_gathering/tool-specific/shodan/index.html" title="Active Reconnaissance (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -207,100 +155,11 @@ Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip
 
   </header>
 
-<h1 id="whois--domain-enumeration">WHOIS &amp; Domain Enumeration</h1>
+<h1 id="active-reconnaissance">Active Reconnaissance</h1>
 
-<h2 id="basic-whois-lookup">Basic WHOIS Lookup</h2>
-<h3 id="command-line-whois">Command-Line WHOIS</h3>
-<p>Basic domain WHOIS lookup</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whois $ip</span></span></code></pre></div>
-<p>Query a specific WHOIS server</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whois -h whois.verisign-grs.com $ip</span></span></code></pre></div>
-<p>Show detailed results (Linux)</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whois --verbose $ip</span></span></code></pre></div>
-<h3 id="online-whois-services">Online WHOIS Services</h3>
-<p><a href="https://lookup.icann.org/en" rel="external" target="_blank">Whois Lookup (ICANN)</a></p>
-<p><a href="https://whois.domaintools.com/" rel="external" target="_blank">Whois Domain Tools</a></p>
-<p><a href="https://www.whoxy.com/" rel="external" target="_blank">WhoXY</a></p>
-<h2 id="extracting-nameservers--dns-records">Extracting Nameservers &amp; DNS Records</h2>
-<h3 id="query-nameservers">Query Nameservers</h3>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup -type<span style="color:#f92672">=</span>NS $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig NS $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>host -t ns $ip</span></span></code></pre></div>
-<h3 id="query-mx-records-mail-servers">Query MX Records (Mail Servers)</h3>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup -type<span style="color:#f92672">=</span>MX $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig MX $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>host -t mx $ip</span></span></code></pre></div>
-<h3 id="query-txt-records-spf-dkim-dmarc-etc">Query TXT Records (SPF, DKIM, DMARC, etc.)</h3>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup -type<span style="color:#f92672">=</span>TXT $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig TXT $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>host -t txt $ip</span></span></code></pre></div>
-<h2 id="subdomain-enumeration">Subdomain Enumeration</h2>
-<h3 id="brute-force-subdomains">Brute-Force Subdomains</h3>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sublist3r -d $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>amass enum -d $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>assetfinder --subs-only $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dnsrecon -d $ip -t brt</span></span></code></pre></div>
-<h3 id="passive-subdomain-enumeration">Passive Subdomain Enumeration</h3>
-<ul>
-<li>
-<p><a href="https://crt.sh/" rel="external" target="_blank">crt.sh</a> → Certificate Transparency logs</p>
-</li>
-<li>
-<p><a href="http://ci-www.threatcrowd.org/" rel="external" target="_blank">ThreatCrowd</a> → OSINT subdomain lookup</p>
-</li>
-<li>
-<p><a href="https://www.virustotal.com/gui/home/upload" rel="external" target="_blank">VirusTotal</a> → Find subdomains via DNS queries</p>
-</li>
-</ul>
-<h2 id="zone-transfer-axfr-attack-check">Zone Transfer (AXFR Attack Check)</h2>
-<h3 id="try-zone-transfer-if-misconfigured">Try Zone Transfer (If Misconfigured)</h3>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig AXFR example.com @ns1.$ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>host -l example.com ns1.$ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dnsrecon -d $ip -t axfr</span></span></code></pre></div>
-<h2 id="reverse-dns-lookup">Reverse DNS Lookup</h2>
-<h3 id="find-domain-associated-with-an-ip">Find Domain Associated with an IP</h3>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -x $ip</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>host $ip</span></span></code></pre></div>
-<h3 id="find-subdomains-via-reverse-lookups">Find Subdomains via Reverse Lookups</h3>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dnsrecon -r 192.168.1.0/24</span></span></code></pre></div>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fierce -dns $ip</span></span></code></pre></div>
-<p>Use DNS module for reverse lookups</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>recon-ng</span></span></code></pre></div>
-<h2 id="online-dns--whois-tools">Online DNS &amp; WHOIS Tools</h2>
-<ul>
-<li>
-<p><a href="https://securitytrails.com/" rel="external" target="_blank">SecurityTrails</a> → Historical DNS records</p>
-</li>
-<li>
-<p><a href="https://spyse.com/" rel="external" target="_blank">Spyse</a> → Advanced domain intelligence</p>
-</li>
-<li>
-<p><a href="https://www.robtex.com/" rel="external" target="_blank">Robtex</a> → DNS &amp; network graphing</p>
-</li>
-<li>
-<p><a href="https://viewdns.info/" rel="external" target="_blank">ViewDNS.info</a> → DNS &amp; WHOIS lookup tools</p>
-</li>
-</ul>
-<h2 id="automation--osint-tools-for-domain-intelligence">Automation &amp; OSINT Tools for Domain Intelligence</h2>
-<ul>
-<li>
-<p><strong>theHarvester</strong> → Email, subdomains, and hosts reconnaissance</p>
-</li>
-<li>
-<p><strong>Subfinder</strong> → Fast passive subdomain discovery</p>
-</li>
-<li>
-<p><strong>Amass</strong> → OSINT-powered subdomain enumeration</p>
-</li>
-<li>
-<p><strong>MassDNS</strong> → High-performance DNS resolver</p>
-</li>
-<li>
-<p><strong>Nmap</strong> → Scan domains for open services</p>
-</li>
-</ul>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p80,443 $ip</span></span></code></pre></div>
+<p><a href="../../../reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html">Port Scanning (Nmap, Masscan)</a></p>
+<p><a href="../../../reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html">Service Enumeration</a></p>
+<p><a href="../../../reconnaissance_info_gathering/active_reconnaissance/banner_grabbing/index.html">Banner_Grabbing</a></p>
 
   <footer class="footline">
   </footer>
@@ -334,20 +193,20 @@ Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip
         <div id="R-shortcutmenu-home" class="R-sidebarmenu">
           <ul class="enlarge morespace collapsible-menu">
             <li class="parent " data-nav-id="/reconnaissance_info_gathering/index.html"><input type="checkbox" id="R-section-a8029b3505079b5cd47c34ac2aab2fd5" aria-controls="R-subsections-a8029b3505079b5cd47c34ac2aab2fd5" checked><label for="R-section-a8029b3505079b5cd47c34ac2aab2fd5"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu 1. Reconnaissance &amp; Information Gathering</span></label><a class="padding" href="../../../reconnaissance_info_gathering/index.html">1. Reconnaissance &amp; Information Gathering</a><ul id="R-subsections-a8029b3505079b5cd47c34ac2aab2fd5" class="collapsible-menu">
-            <li class="parent " data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/index.html"><input type="checkbox" id="R-section-92e907b4c1809f2e8740cf6286089ab0" aria-controls="R-subsections-92e907b4c1809f2e8740cf6286089ab0" checked><label for="R-section-92e907b4c1809f2e8740cf6286089ab0"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Passive Reconnaissance</span></label><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/index.html">Passive Reconnaissance</a><ul id="R-subsections-92e907b4c1809f2e8740cf6286089ab0" class="collapsible-menu">
+            <li class="" data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/index.html"><input type="checkbox" id="R-section-92e907b4c1809f2e8740cf6286089ab0" aria-controls="R-subsections-92e907b4c1809f2e8740cf6286089ab0"><label for="R-section-92e907b4c1809f2e8740cf6286089ab0"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Passive Reconnaissance</span></label><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/index.html">Passive Reconnaissance</a><ul id="R-subsections-92e907b4c1809f2e8740cf6286089ab0" class="collapsible-menu">
             <li class="" data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/osint/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/osint/index.html">OSINT</a></li>
-            <li class="active " data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html">WHOIS &amp; Domain Enumeration</a></li>
+            <li class="" data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html">WHOIS &amp; Domain Enumeration</a></li>
             <li class="" data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html">Email Enumeration</a></li></ul></li>
             <li class="" data-nav-id="/reconnaissance_info_gathering/active_reconnaissance/index.html"><input type="checkbox" id="R-section-4468bf876912d61b82a5f526ba1c35be" aria-controls="R-subsections-4468bf876912d61b82a5f526ba1c35be"><label for="R-section-4468bf876912d61b82a5f526ba1c35be"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Active Reconnaissance</span></label><a class="padding" href="../../../reconnaissance_info_gathering/active_reconnaissance/index.html">Active Reconnaissance</a><ul id="R-subsections-4468bf876912d61b82a5f526ba1c35be" class="collapsible-menu">
             <li class="" data-nav-id="/reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html">Port Scanning (Nmap, Masscan)</a></li>
             <li class="" data-nav-id="/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html"><input type="checkbox" id="R-section-7dea01a123a1571282a5b9cad03e6f13" aria-controls="R-subsections-7dea01a123a1571282a5b9cad03e6f13"><label for="R-section-7dea01a123a1571282a5b9cad03e6f13"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Service Enumeration</span></label><a class="padding" href="../../../reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html">Service Enumeration</a><ul id="R-subsections-7dea01a123a1571282a5b9cad03e6f13" class="collapsible-menu">
             <li class="" data-nav-id="/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/dns/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/active_reconnaissance/service_enumeration/dns/index.html">Domain Name System (DNS)</a></li></ul></li>
             <li class="" data-nav-id="/reconnaissance_info_gathering/active_reconnaissance/banner_grabbing/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/active_reconnaissance/banner_grabbing/index.html">Banner Grabbing</a></li></ul></li>
-            <li class="" data-nav-id="/reconnaissance_info_gathering/tool-specific/index.html"><input type="checkbox" id="R-section-ba2f48f382a28ab4438c1514db7a8d60" aria-controls="R-subsections-ba2f48f382a28ab4438c1514db7a8d60"><label for="R-section-ba2f48f382a28ab4438c1514db7a8d60"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Tool-Specific Reconnaissance</span></label><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/index.html">Tool-Specific Reconnaissance</a><ul id="R-subsections-ba2f48f382a28ab4438c1514db7a8d60" class="collapsible-menu">
+            <li class="parent " data-nav-id="/reconnaissance_info_gathering/tool-specific/index.html"><input type="checkbox" id="R-section-ba2f48f382a28ab4438c1514db7a8d60" aria-controls="R-subsections-ba2f48f382a28ab4438c1514db7a8d60" checked><label for="R-section-ba2f48f382a28ab4438c1514db7a8d60"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Tool-Specific Reconnaissance</span></label><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/index.html">Tool-Specific Reconnaissance</a><ul id="R-subsections-ba2f48f382a28ab4438c1514db7a8d60" class="collapsible-menu">
             <li class="" data-nav-id="/reconnaissance_info_gathering/tool-specific/nmap/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/nmap/index.html">Nmap</a></li>
             <li class="" data-nav-id="/reconnaissance_info_gathering/tool-specific/amass/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/amass/index.html">Active Reconnaissance</a></li>
             <li class="" data-nav-id="/reconnaissance_info_gathering/tool-specific/censys/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/censys/index.html">Active Reconnaissance</a></li>
-            <li class="" data-nav-id="/reconnaissance_info_gathering/tool-specific/masscan/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/masscan/index.html">Active Reconnaissance</a></li>
+            <li class="active " data-nav-id="/reconnaissance_info_gathering/tool-specific/masscan/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/masscan/index.html">Active Reconnaissance</a></li>
             <li class="" data-nav-id="/reconnaissance_info_gathering/tool-specific/shodan/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/tool-specific/shodan/index.html">Active Reconnaissance</a></li></ul></li></ul></li>
           </ul>
         </div>
@@ -363,7 +222,7 @@ Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="../../../reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html" lang="en-us" selected></option>
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="../../../reconnaissance_info_gathering/tool-specific/masscan/index.html" lang="en-us" selected></option>
                     </select>
                   </div>
                   <div class="clear"></div>
