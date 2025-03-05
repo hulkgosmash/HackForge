@@ -85,7 +85,7 @@ site:linkedin.com/in/ "$user"
 
 **Instagram**
 
-```
+```bash
 site:instagram.com "@$user"
 ```
 

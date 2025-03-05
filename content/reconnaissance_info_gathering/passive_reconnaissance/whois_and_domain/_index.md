@@ -68,11 +68,11 @@ host -t mx $ip
 
 ### Query TXT Records (SPF, DKIM, DMARC, etc.)
 
-```
+```bash
 nslookup -type=TXT $ip
 ```
 
-```
+```bash
 dig TXT $ip
 ```
 
@@ -128,25 +128,25 @@ dnsrecon -d $ip -t axfr
 
 ### Find Domain Associated with an IP
 
-```
+```bash
 nslookup $ip
 ```
 
-```
+```bash
 dig -x $ip
 ```
 
-```
+```bash
 host $ip
 ```
 
 ### Find Subdomains via Reverse Lookups
 
-```
+```bash
 dnsrecon -r 192.168.1.0/24
 ```
 
-```
+```bash
 fierce -dns $ip
 ```
 
