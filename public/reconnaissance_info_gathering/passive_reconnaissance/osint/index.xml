@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSINT :: HackForge</title>
+    <link>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/osint/index.html</link>
+    <description>Search Engines &amp; Advanced Queries Google Dorking Search within a specific site&#xA;site:$ip Find open directories&#xA;intitle:&#34;index of&#34; Find open directories&#xA;intitle:&#34;index of&#34; Search for specific file types&#xA;filetype:pdf Find admin panels&#xA;inurl:admin View cached pages&#xA;cache:$ip Search for emails&#xA;&#34;$user@gmail.com&#34; Alternative Search Engines DuckDuckGo – Privacy-focused search&#xA;Bing/Yandex – Different indexing results&#xA;Shodan – IoT &amp; network scanning&#xA;Social Media OSINT User Enumeration Facebook:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/osint/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

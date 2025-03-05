@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.4.1+521de1e32e5e1028825729e00e85cc56e078c02a">
+    <meta name="description" content="Search Engines &amp; Advanced Queries Google Dorking Search within a specific site
+site:$ip Find open directories
+intitle:&#34;index of&#34; Find open directories
+intitle:&#34;index of&#34; Search for specific file types
+filetype:pdf Find admin panels
+inurl:admin View cached pages
+cache:$ip Search for emails
+&#34;$user@gmail.com&#34; Alternative Search Engines DuckDuckGo – Privacy-focused search
+Bing/Yandex – Different indexing results
+Shodan – IoT &amp; network scanning
+Social Media OSINT User Enumeration Facebook:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="OSINT :: HackForge">
+    <meta name="twitter:description" content="Search Engines &amp; Advanced Queries Google Dorking Search within a specific site
+site:$ip Find open directories
+intitle:&#34;index of&#34; Find open directories
+intitle:&#34;index of&#34; Search for specific file types
+filetype:pdf Find admin panels
+inurl:admin View cached pages
+cache:$ip Search for emails
+&#34;$user@gmail.com&#34; Alternative Search Engines DuckDuckGo – Privacy-focused search
+Bing/Yandex – Different indexing results
+Shodan – IoT &amp; network scanning
+Social Media OSINT User Enumeration Facebook:">
+    <meta property="og:url" content="http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/osint/index.html">
+    <meta property="og:site_name" content="HackForge">
+    <meta property="og:title" content="OSINT :: HackForge">
+    <meta property="og:description" content="Search Engines &amp; Advanced Queries Google Dorking Search within a specific site
+site:$ip Find open directories
+intitle:&#34;index of&#34; Find open directories
+intitle:&#34;index of&#34; Search for specific file types
+filetype:pdf Find admin panels
+inurl:admin View cached pages
+cache:$ip Search for emails
+&#34;$user@gmail.com&#34; Alternative Search Engines DuckDuckGo – Privacy-focused search
+Bing/Yandex – Different indexing results
+Shodan – IoT &amp; network scanning
+Social Media OSINT User Enumeration Facebook:">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="OSINT :: HackForge">
+    <meta itemprop="description" content="Search Engines &amp; Advanced Queries Google Dorking Search within a specific site
+site:$ip Find open directories
+intitle:&#34;index of&#34; Find open directories
+intitle:&#34;index of&#34; Search for specific file types
+filetype:pdf Find admin panels
+inurl:admin View cached pages
+cache:$ip Search for emails
+&#34;$user@gmail.com&#34; Alternative Search Engines DuckDuckGo – Privacy-focused search
+Bing/Yandex – Different indexing results
+Shodan – IoT &amp; network scanning
+Social Media OSINT User Enumeration Facebook:">
+    <meta itemprop="wordCount" content="223">
+    <title>OSINT :: HackForge</title>
+    <link href="../../../reconnaissance_info_gathering/passive_reconnaissance/osint/index.xml" rel="alternate" type="application/rss+xml" title="OSINT :: HackForge">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1741139428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1741139428" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1741139428" rel="stylesheet">
+    <link href="../../../css/theme.css?1741139428" rel="stylesheet">
+    <link href="../../../css/format-html.css?1741139428" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1741139428" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1741139428" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1741139428" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1741139428" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1741139428" defer></script>
+    <script src="../../../js/lunr/lunr.en.min.js?1741139428" defer></script>
+    <script src="../../../js/search.js?1741139428" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="../../../searchindex.en.js?1741139428";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // variant stuff
+      window.relearn.themevariants = [ 'zen-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableHoverBlockCopyToClipBoard" data-url="../../../reconnaissance_info_gathering/passive_reconnaissance/osint/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#search-engines--advanced-queries">Search Engines &amp; Advanced Queries</a>
+      <ul>
+        <li><a href="#google-dorking">Google Dorking</a></li>
+        <li><a href="#alternative-search-engines">Alternative Search Engines</a></li>
+      </ul>
+    </li>
+    <li><a href="#social-media-osint">Social Media OSINT</a>
+      <ul>
+        <li><a href="#user-enumeration">User Enumeration</a></li>
+        <li><a href="#tools-for-social-media-analysis">Tools for Social Media Analysis</a></li>
+      </ul>
+    </li>
+    <li><a href="#dark-web-osint">Dark Web OSINT</a>
+      <ul>
+        <li><a href="#tools--resources">Tools &amp; Resources</a></li>
+      </ul>
+    </li>
+    <li><a href="#people--address-lookups">People &amp; Address Lookups</a>
+      <ul>
+        <li><a href="#general-person-search">General Person Search</a></li>
+        <li><a href="#geolocation--maps">Geolocation &amp; Maps</a></li>
+      </ul>
+    </li>
+    <li><a href="#image--metadata-analysis">Image &amp; Metadata Analysis</a>
+      <ul>
+        <li><a href="#reverse-image-search">Reverse Image Search</a></li>
+        <li><a href="#metadata-extraction">Metadata Extraction</a></li>
+      </ul>
+    </li>
+    <li><a href="#osint-automation-tools">OSINT Automation Tools</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../index.html"><span itemprop="name">HackForge</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../reconnaissance_info_gathering/index.html"><span itemprop="name">1. Reconnaissance &amp; Information Gathering</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../reconnaissance_info_gathering/passive_reconnaissance/index.html"><span itemprop="name">Passive Reconnaissance</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">OSINT</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../reconnaissance_info_gathering/passive_reconnaissance/index.html" title="Passive Reconnaissance (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html" title="WHOIS & Domain Enumeration (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable reconnaissance_info_gathering" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline"><p>Input parameters below and click on the <b>Update</b> button to have commands dynamically updated.</p>
+
+<div style="display: flex; gap: 10px; align-items: center;">
+    <input type="text" id="target-ip" class="form-control" placeholder="Target IP / Domain">
+    <input type="text" id="attacker-ip" class="form-control" placeholder="Attacker IP">
+</div>
+<div style="display: flex; gap: 10px; align-items: center;">
+    <input type="text" id="username" class="form-control" placeholder="Username">
+    <input type="text" id="password" class="form-control" placeholder="Password">
+</div>
+<div style="text-align: center;">
+    <button id="update-button" style="border: 1px solid black; background-color: #d3d3d3; color: black; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
+        Update
+    </button>
+</div>
+
+
+
+  </header>
+
+<h1 id="osint">OSINT</h1>
+
+<h2 id="search-engines--advanced-queries">Search Engines &amp; Advanced Queries</h2>
+<h3 id="google-dorking">Google Dorking</h3>
+<p>Search within a specific site</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>site:$ip</span></span></code></pre></div>
+<p>Find open directories</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>intitle:<span style="color:#e6db74">&#34;index of&#34;</span></span></span></code></pre></div>
+<p>Find open directories</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>intitle:<span style="color:#e6db74">&#34;index of&#34;</span></span></span></code></pre></div>
+<p>Search for specific file types</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>filetype:pdf</span></span></code></pre></div>
+<p>Find admin panels</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>inurl:admin</span></span></code></pre></div>
+<p>View cached pages</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cache:$ip</span></span></code></pre></div>
+<p>Search for emails</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>$user<span style="color:#e6db74">@gmail.com&#34;</span></span></span></code></pre></div>
+<h3 id="alternative-search-engines">Alternative Search Engines</h3>
+<ul>
+<li>
+<p><strong>DuckDuckGo</strong> – Privacy-focused search</p>
+</li>
+<li>
+<p><strong>Bing/Yandex</strong> – Different indexing results</p>
+</li>
+<li>
+<p><strong>Shodan</strong> – IoT &amp; network scanning</p>
+</li>
+</ul>
+<h2 id="social-media-osint">Social Media OSINT</h2>
+<h3 id="user-enumeration">User Enumeration</h3>
+<p><strong>Facebook</strong>:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>site:facebook.com <span style="color:#e6db74">&#34;</span>$user<span style="color:#e6db74">&#34;</span></span></span></code></pre></div>
+<p><strong>Twitter</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>site:twitter.com <span style="color:#e6db74">&#34;@</span>$user<span style="color:#e6db74">&#34;</span></span></span></code></pre></div>
+<p><strong>LinkedIn</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>site:linkedin.com/in/ <span style="color:#e6db74">&#34;</span>$user<span style="color:#e6db74">&#34;</span></span></span></code></pre></div>
+<p><strong>Instagram</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>site:instagram.com &#34;@$user&#34;</code></pre></div>
+<h3 id="tools-for-social-media-analysis">Tools for Social Media Analysis</h3>
+<ul>
+<li>
+<p><strong>Sherlock</strong> – Username lookup</p>
+</li>
+<li>
+<p><strong>Twint</strong> – Twitter scraping</p>
+</li>
+<li>
+<p><strong>Socinvestigate</strong> – Social media OSINT</p>
+</li>
+</ul>
+<h2 id="dark-web-osint">Dark Web OSINT</h2>
+<h3 id="tools--resources">Tools &amp; Resources</h3>
+<ul>
+<li>
+<p><strong>OnionSearch</strong> – Search .onion sites</p>
+</li>
+<li>
+<p><strong>Ahmia</strong> – Dark web search engine</p>
+</li>
+<li>
+<p><strong>Tor2Web</strong> – Access .onion without Tor</p>
+</li>
+</ul>
+<h2 id="people--address-lookups">People &amp; Address Lookups</h2>
+<h3 id="general-person-search">General Person Search</h3>
+<ul>
+<li>
+<p><strong>Pipl</strong> – People search engine</p>
+</li>
+<li>
+<p><strong>Spokeo</strong> – Reverse lookup</p>
+</li>
+<li>
+<p><strong>PeekYou</strong> – Social profile aggregation</p>
+</li>
+</ul>
+<h3 id="geolocation--maps">Geolocation &amp; Maps</h3>
+<ul>
+<li>
+<p><strong>Google Earth</strong> – Satellite imagery</p>
+</li>
+<li>
+<p><strong>GeoGuessr</strong> – Geolocation challenge</p>
+</li>
+<li>
+<p><strong>IP2Location</strong> – Locate IP addresses</p>
+</li>
+</ul>
+<h2 id="image--metadata-analysis">Image &amp; Metadata Analysis</h2>
+<h3 id="reverse-image-search">Reverse Image Search</h3>
+<ul>
+<li>
+<p><strong>Google Reverse Image</strong> – Find similar images</p>
+</li>
+<li>
+<p><strong>Yandex Images</strong> – Strong image search</p>
+</li>
+<li>
+<p><strong>Tineye</strong> – Reverse image search</p>
+</li>
+</ul>
+<h3 id="metadata-extraction">Metadata Extraction</h3>
+<ul>
+<li>
+<p><strong>ExifTool</strong> – Extract EXIF data</p>
+</li>
+<li>
+<p><strong>FotoForensics</strong> – Image analysis</p>
+</li>
+<li>
+<p><strong>Jeffrey’s Image Metadata Viewer</strong> – View hidden data</p>
+</li>
+</ul>
+<h2 id="osint-automation-tools">OSINT Automation Tools</h2>
+<ul>
+<li>
+<p><strong>SpiderFoot</strong> – Automated OSINT framework</p>
+</li>
+<li>
+<p><strong>Maltego</strong> – Graph-based link analysis</p>
+</li>
+<li>
+<p><strong>Recon-ng</strong> – Web reconnaissance</p>
+</li>
+<li>
+<p><strong>theHarvester</strong> – Email, subdomain &amp; IP reconnaissance</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<h2>HackForge</h2>
+
+        </div>
+        <search><form action="../../../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="../../../index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/reconnaissance_info_gathering/index.html"><input type="checkbox" id="R-section-a8029b3505079b5cd47c34ac2aab2fd5" aria-controls="R-subsections-a8029b3505079b5cd47c34ac2aab2fd5" checked><label for="R-section-a8029b3505079b5cd47c34ac2aab2fd5"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu 1. Reconnaissance &amp; Information Gathering</span></label><a class="padding" href="../../../reconnaissance_info_gathering/index.html">1. Reconnaissance &amp; Information Gathering</a><ul id="R-subsections-a8029b3505079b5cd47c34ac2aab2fd5" class="collapsible-menu">
+            <li class="parent " data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/index.html"><input type="checkbox" id="R-section-92e907b4c1809f2e8740cf6286089ab0" aria-controls="R-subsections-92e907b4c1809f2e8740cf6286089ab0" checked><label for="R-section-92e907b4c1809f2e8740cf6286089ab0"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Passive Reconnaissance</span></label><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/index.html">Passive Reconnaissance</a><ul id="R-subsections-92e907b4c1809f2e8740cf6286089ab0" class="collapsible-menu">
+            <li class="active " data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/osint/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/osint/index.html">OSINT</a></li>
+            <li class="" data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html">WHOIS &amp; Domain Enumeration</a></li>
+            <li class="" data-nav-id="/reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html"><a class="padding" href="../../../reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html">Email Enumeration</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/bruteforce/index.html"><input type="checkbox" id="R-section-ef82b2f756b8b08d03bb282bbf69a870" aria-controls="R-subsections-ef82b2f756b8b08d03bb282bbf69a870"><label for="R-section-ef82b2f756b8b08d03bb282bbf69a870"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Brute Force</span></label><a class="padding" href="../../../bruteforce/index.html">Brute Force</a><ul id="R-subsections-ef82b2f756b8b08d03bb282bbf69a870" class="collapsible-menu">
+            <li class="" data-nav-id="/bruteforce/services/index.html"><a class="padding" href="../../../bruteforce/services/index.html">Services</a></li></ul></li>
+            <li class="" data-nav-id="/enumeration/index.html"><input type="checkbox" id="R-section-591a834aab1f3c953f28b0b864b35f51" aria-controls="R-subsections-591a834aab1f3c953f28b0b864b35f51"><label for="R-section-591a834aab1f3c953f28b0b864b35f51"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Enumeration</span></label><a class="padding" href="../../../enumeration/index.html">Enumeration</a><ul id="R-subsections-591a834aab1f3c953f28b0b864b35f51" class="collapsible-menu">
+            <li class="" data-nav-id="/enumeration/hosts/index.html"><input type="checkbox" id="R-section-1f61669d703c60f3bfc1fab237a82b8b" aria-controls="R-subsections-1f61669d703c60f3bfc1fab237a82b8b"><label for="R-section-1f61669d703c60f3bfc1fab237a82b8b"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Hosts</span></label><a class="padding" href="../../../enumeration/hosts/index.html">Hosts</a><ul id="R-subsections-1f61669d703c60f3bfc1fab237a82b8b" class="collapsible-menu">
+            <li class="" data-nav-id="/enumeration/hosts/port-scanning/index.html"><a class="padding" href="../../../enumeration/hosts/port-scanning/index.html">Port Scanning</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/index.html"><input type="checkbox" id="R-section-2995839649a9e84718c2ac498b858682" aria-controls="R-subsections-2995839649a9e84718c2ac498b858682"><label for="R-section-2995839649a9e84718c2ac498b858682"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Services</span></label><a class="padding" href="../../../enumeration/hosts/services/index.html">Services</a><ul id="R-subsections-2995839649a9e84718c2ac498b858682" class="collapsible-menu">
+            <li class="" data-nav-id="/enumeration/hosts/services/domain-name-system/index.html"><a class="padding" href="../../../enumeration/hosts/services/domain-name-system/index.html">Domain Name System (DNS)</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/file-transfer-protocol-ftp/index.html"><a class="padding" href="../../../enumeration/hosts/services/file-transfer-protocol-ftp/index.html">File Transfer Protocol (FTP)</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/network-file-system-nfs/index.html"><a class="padding" href="../../../enumeration/hosts/services/network-file-system-nfs/index.html">Network File System (NFS)</a></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/server-message-block-smb/index.html"><a class="padding" href="../../../enumeration/hosts/services/server-message-block-smb/index.html">Server Message Block (SMB)</a></li></ul></li></ul></li></ul></li>
+            <li class="" data-nav-id="/exploitation/index.html"><a class="padding" href="../../../exploitation/index.html">Exploitation</a></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="../../../reconnaissance_info_gathering/passive_reconnaissance/osint/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-zen-dark" value="zen-dark" selected>Zen Dark</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+            <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1741139428" defer></script>
+    <script src="../../../js/theme.js?1741139428" defer></script><script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function updateCodeBlocks() {
+            
+            let ip = document.getElementById("target-ip")?.value || "127.0.0.1";
+            let attackerIp = document.getElementById("attacker-ip")?.value || "192.168.1.100";
+            let user = document.getElementById("username")?.value || "admin";
+            let password = document.getElementById("password")?.value || "password";
+    
+            
+            document.querySelectorAll("pre code").forEach((codeBlock) => {
+                let originalCode = codeBlock.getAttribute("data-original");
+    
+                
+                if (!originalCode) {
+                    originalCode = codeBlock.innerHTML;
+                    codeBlock.setAttribute("data-original", originalCode);
+                }
+    
+                
+                let decodedCode = originalCode
+                    .replace(/&lt;/g, "<")
+                    .replace(/&gt;/g, ">")
+                    .replace(/&amp;/g, "&");
+    
+                
+                let updatedCode = decodedCode
+                    .replace(/\$ip/g, ip)
+                    .replace(/\$attacker-ip/g, attackerIp)
+                    .replace(/\$user/g, user)
+                    .replace(/\$password/g, password);
+    
+                
+                codeBlock.innerHTML = updatedCode;
+    
+                
+                let preBlock = codeBlock.closest("pre");
+                if (preBlock) {
+                    preBlock.setAttribute("data-updated-code", updatedCode);
+                }
+            });
+    
+            
+            addCopyButtons();
+        }
+    
+        
+        document.getElementById("update-button").addEventListener("click", updateCodeBlocks);
+    
+        
+        function addCopyButtons() {
+            document.querySelectorAll("pre").forEach((preElement) => {
+                
+                let oldCopyButton = preElement.querySelector(".custom-copy-button");
+                if (oldCopyButton) {
+                    oldCopyButton.remove();
+                }
+    
+                
+                let copyButton = document.createElement("button");
+                copyButton.className = "custom-copy-button";
+                copyButton.innerText = "Copy";
+                copyButton.style.position = "absolute";
+                copyButton.style.top = "10px";
+                copyButton.style.right = "10px";
+                copyButton.style.padding = "5px 10px";
+                copyButton.style.fontSize = "14px";
+                copyButton.style.cursor = "pointer";
+                copyButton.style.backgroundColor = "#202020";
+                copyButton.style.border = "1px solid black";
+                copyButton.style.borderRadius = "4px";
+    
+                
+                preElement.style.position = "relative"; 
+                preElement.appendChild(copyButton);
+    
+                
+                copyButton.addEventListener("click", function () {
+                    let modifiedCode = preElement.getAttribute("data-updated-code") || "";
+
+                    if (modifiedCode) {
+                        let cleanCode = stripHTML(modifiedCode); 
+
+                        navigator.clipboard.writeText(cleanCode).then(() => {
+                            copyButton.innerText = "Copied!";
+                            setTimeout(() => {
+                                copyButton.innerText = "Copy";
+                            }, 2000);
+                        }).catch(err => console.error("Copy failed:", err));
+                    }
+                });
+
+                
+                function stripHTML(html) {
+                    let tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = html;
+                    return tempDiv.textContent || tempDiv.innerText || "";
+                }
+
+            });
+        }
+    
+        
+        setTimeout(updateCodeBlocks, 500);
+    });
+    </script>
+    
+
+  </body>
+</html>

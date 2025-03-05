@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>File Transfer Protocol (FTP) :: HackForge</title><link>https://example.org/enumeration/hosts/services/file-transfer-protocol-ftp/index.html</link><description>General Create an active connection
-ftp $ip Create a passive connection (If you can’t see files it may help)
-ftp -p $ip List all files
-ls -lah Download multiple files
-prompt mget * Download all files using wget
-wget -r ftp://$user:$password@$ip/ View the directory contents with curl
-curl -s -v 'ftp://$user:$password@$ip/' View directory contents with curl in passive mode
-curl -s -v -P - 'ftp://$user:$password@$ip/' Upload a file with curl</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/enumeration/hosts/services/file-transfer-protocol-ftp/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>File Transfer Protocol (FTP) :: HackForge</title>
+    <link>http://localhost:1313/enumeration/hosts/services/file-transfer-protocol-ftp/index.html</link>
+    <description>General Create an active connection&#xA;ftp $ip Create a passive connection (If you can’t see files it may help)&#xA;ftp -p $ip List all files&#xA;ls -lah Download multiple files&#xA;prompt mget * Download all files using wget&#xA;wget -r ftp://$user:$password@$ip/ View the directory contents with curl&#xA;curl -s -v &#39;ftp://$user:$password@$ip/&#39; View directory contents with curl in passive mode&#xA;curl -s -v -P - &#39;ftp://$user:$password@$ip/&#39; Upload a file with curl</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/enumeration/hosts/services/file-transfer-protocol-ftp/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

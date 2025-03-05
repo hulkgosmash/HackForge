@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HackForge</title><link>https://example.org/index.html</link><description>This is your new home page.</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Enumeration</title><link>https://example.org/enumeration/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/enumeration/index.html</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HackForge</title>
+    <link>http://localhost:1313/index.html</link>
+    <description>This is your new home page.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Reconnaissance &amp; Information Gathering</title>
+      <link>http://localhost:1313/reconnaissance_info_gathering/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reconnaissance_info_gathering/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brute Force</title>
+      <link>http://localhost:1313/bruteforce/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/bruteforce/index.html</guid>
+      <description>Services</description>
+    </item>
+    <item>
+      <title>Enumeration</title>
+      <link>http://localhost:1313/enumeration/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/enumeration/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exploitation</title>
+      <link>http://localhost:1313/exploitation/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/exploitation/index.html</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

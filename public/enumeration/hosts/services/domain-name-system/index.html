@@ -5,54 +5,54 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.4.1+521de1e32e5e1028825729e00e85cc56e078c02a">
-    <meta name="description" content="Initial Scans Netbios scan
-nbtscan -r $ip Enumerate host name
-nmblookup -A $ip List Shares #1 (specifying guest account)
-smbmap -H $ip -u guest List Shares #2
-smbclient -L \\$ip List Shares #3
-crackmapexec smb $ip --shares List Shares with credentials
-smbmap -u $user -p $password -R -H $ip Exhaustive Scan
-enum4linux -a -M -l -d $ip Check Null Sessions
-smbmap -H $ip Check Null Sessions">
+    <meta name="description" content="General Try zone transfer without domain
+dig axfr @$ip Try zone transfer guessing the domain
+dig axfr @$ip $domain Regular DNS request
+dig ANY @$ip $domain IPv6 DNS request
+dig AAAA @$ip $domain Get TXT Records
+dig TXT @$ip $domain Get MX Records
+dig MX @$ip $domain Get NS records of the given domain
+dig NS @$ip $domain Reverse lookup
+dig -x 192.168.0.2 @$ip Reverse IPv6 lookup">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Server Message Block (SMB) :: HackForge">
-    <meta name="twitter:description" content="Initial Scans Netbios scan
-nbtscan -r $ip Enumerate host name
-nmblookup -A $ip List Shares #1 (specifying guest account)
-smbmap -H $ip -u guest List Shares #2
-smbclient -L \\$ip List Shares #3
-crackmapexec smb $ip --shares List Shares with credentials
-smbmap -u $user -p $password -R -H $ip Exhaustive Scan
-enum4linux -a -M -l -d $ip Check Null Sessions
-smbmap -H $ip Check Null Sessions">
-    <meta property="og:url" content="http://localhost:1313/enumeration/hosts/services/server-message-block-smb/index.html">
+    <meta name="twitter:title" content="Domain Name System (DNS) :: HackForge">
+    <meta name="twitter:description" content="General Try zone transfer without domain
+dig axfr @$ip Try zone transfer guessing the domain
+dig axfr @$ip $domain Regular DNS request
+dig ANY @$ip $domain IPv6 DNS request
+dig AAAA @$ip $domain Get TXT Records
+dig TXT @$ip $domain Get MX Records
+dig MX @$ip $domain Get NS records of the given domain
+dig NS @$ip $domain Reverse lookup
+dig -x 192.168.0.2 @$ip Reverse IPv6 lookup">
+    <meta property="og:url" content="http://localhost:1313/enumeration/hosts/services/domain-name-system/index.html">
     <meta property="og:site_name" content="HackForge">
-    <meta property="og:title" content="Server Message Block (SMB) :: HackForge">
-    <meta property="og:description" content="Initial Scans Netbios scan
-nbtscan -r $ip Enumerate host name
-nmblookup -A $ip List Shares #1 (specifying guest account)
-smbmap -H $ip -u guest List Shares #2
-smbclient -L \\$ip List Shares #3
-crackmapexec smb $ip --shares List Shares with credentials
-smbmap -u $user -p $password -R -H $ip Exhaustive Scan
-enum4linux -a -M -l -d $ip Check Null Sessions
-smbmap -H $ip Check Null Sessions">
+    <meta property="og:title" content="Domain Name System (DNS) :: HackForge">
+    <meta property="og:description" content="General Try zone transfer without domain
+dig axfr @$ip Try zone transfer guessing the domain
+dig axfr @$ip $domain Regular DNS request
+dig ANY @$ip $domain IPv6 DNS request
+dig AAAA @$ip $domain Get TXT Records
+dig TXT @$ip $domain Get MX Records
+dig MX @$ip $domain Get NS records of the given domain
+dig NS @$ip $domain Reverse lookup
+dig -x 192.168.0.2 @$ip Reverse IPv6 lookup">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Server Message Block (SMB) :: HackForge">
-    <meta itemprop="description" content="Initial Scans Netbios scan
-nbtscan -r $ip Enumerate host name
-nmblookup -A $ip List Shares #1 (specifying guest account)
-smbmap -H $ip -u guest List Shares #2
-smbclient -L \\$ip List Shares #3
-crackmapexec smb $ip --shares List Shares with credentials
-smbmap -u $user -p $password -R -H $ip Exhaustive Scan
-enum4linux -a -M -l -d $ip Check Null Sessions
-smbmap -H $ip Check Null Sessions">
-    <meta itemprop="wordCount" content="200">
-    <title>Server Message Block (SMB) :: HackForge</title>
-    <link href="../../../../enumeration/hosts/services/server-message-block-smb/index.xml" rel="alternate" type="application/rss+xml" title="Server Message Block (SMB) :: HackForge">
+    <meta itemprop="name" content="Domain Name System (DNS) :: HackForge">
+    <meta itemprop="description" content="General Try zone transfer without domain
+dig axfr @$ip Try zone transfer guessing the domain
+dig axfr @$ip $domain Regular DNS request
+dig ANY @$ip $domain IPv6 DNS request
+dig AAAA @$ip $domain Get TXT Records
+dig TXT @$ip $domain Get MX Records
+dig MX @$ip $domain Get NS records of the given domain
+dig NS @$ip $domain Reverse lookup
+dig -x 192.168.0.2 @$ip Reverse IPv6 lookup">
+    <meta itemprop="wordCount" content="95">
+    <title>Domain Name System (DNS) :: HackForge</title>
+    <link href="../../../../enumeration/hosts/services/domain-name-system/index.xml" rel="alternate" type="application/rss+xml" title="Domain Name System (DNS) :: HackForge">
     <link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1741130901" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1741130901" rel="stylesheet"></noscript>
     <link href="../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1741130901" rel="stylesheet">
     <link href="../../../../css/theme.css?1741130901" rel="stylesheet">
@@ -117,7 +117,7 @@ smbmap -H $ip Check Null Sessions">
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html disableHoverBlockCopyToClipBoard" data-url="../../../../enumeration/hosts/services/server-message-block-smb/index.html">
+  <body class="mobile-support html disableHoverBlockCopyToClipBoard" data-url="../../../../enumeration/hosts/services/domain-name-system/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -131,11 +131,8 @@ smbmap -H $ip Check Null Sessions">
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
   <ul>
-    <li><a href="#initial-scans">Initial Scans</a></li>
-    <li><a href="#connect-to-shares">Connect to shares</a></li>
-    <li><a href="#share-permissions">Share Permissions</a></li>
-    <li><a href="#change-password">Change Password</a></li>
-    <li><a href="#download-files">Download Files</a></li>
+    <li><a href="#general">General</a></li>
+    <li><a href="#subdomains">Subdomains</a></li>
   </ul>
 </nav>
                 </div>
@@ -147,12 +144,12 @@ smbmap -H $ip Check Null Sessions">
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../enumeration/index.html"><span itemprop="name">Enumeration</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../enumeration/hosts/index.html"><span itemprop="name">Hosts</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../enumeration/hosts/services/index.html"><span itemprop="name">Services</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Server Message Block (SMB)</span><meta itemprop="position" content="5"></li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Domain Name System (DNS)</span><meta itemprop="position" content="5"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../../enumeration/hosts/services/network-file-system-nfs/index.html" title="Network File System (NFS) (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../../enumeration/hosts/services/index.html" title="Services (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../../exploitation/index.html" title="Exploitation (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../../enumeration/hosts/services/file-transfer-protocol-ftp/index.html" title="File Transfer Protocol (FTP) (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -189,61 +186,34 @@ smbmap -H $ip Check Null Sessions">
 
   </header>
 
-<h1 id="server-message-block-smb">Server Message Block (SMB)</h1>
+<h1 id="domain-name-system-dns">Domain Name System (DNS)</h1>
 
-<h2 id="initial-scans">Initial Scans</h2>
-<p>Netbios scan</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nbtscan -r $ip</span></span></code></pre></div>
-<p>Enumerate host name</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmblookup -A $ip</span></span></code></pre></div>
-<p>List Shares #1 (specifying guest account)</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbmap -H $ip -u guest</span></span></code></pre></div>
-<p>List Shares #2</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L <span style="color:#ae81ff">\\</span>$ip</span></span></code></pre></div>
-<p>List Shares #3</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb $ip --shares</span></span></code></pre></div>
-<p>List Shares with credentials</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbmap -u $user -p $password -R -H $ip</span></span></code></pre></div>
-<p>Exhaustive Scan</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>enum4linux -a -M -l -d $ip</span></span></code></pre></div>
-<p>Check Null Sessions</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbmap -H $ip</span></span></code></pre></div>
-<p>Check Null Sessions</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rpcclient -U <span style="color:#e6db74">&#34;&#34;</span> -N $ip</span></span></code></pre></div>
-<p>Check Null Sessions</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>enum4linux -a -M -l -d $ip</span></span></code></pre></div>
-<p>Check Null Sessions</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient <span style="color:#ae81ff">\\\\</span>$ip<span style="color:#ae81ff">\\</span>$share</span></span></code></pre></div>
-<p>Vulnerability scan</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap --script smb-vuln* -p 139,445 $ip</span></span></code></pre></div>
-<p>Verify Credentials</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb $ip -u $user -p $password</span></span></code></pre></div>
-<p>User brute force</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb $ip -u anonymous -p <span style="color:#e6db74">&#34;&#34;</span> --rid-brute <span style="color:#ae81ff">10000</span></span></span></code></pre></div>
-<h2 id="connect-to-shares">Connect to shares</h2>
-<p>Connect</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient //$ip/$share</span></span></code></pre></div>
-<p>Connect with credentials</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient //$ip/$share -U $user</span></span></code></pre></div>
-<p>Connect with credentials</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient <span style="color:#ae81ff">\\\\</span>$ip<span style="color:#ae81ff">\\</span>$share -U <span style="color:#e6db74">&#34;</span>$user<span style="color:#e6db74">&#34;</span> -p <span style="color:#e6db74">&#34;</span>$password<span style="color:#e6db74">&#34;</span></span></span></code></pre></div>
-<p>Recursively List Contents</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbmap -H $ip --depth <span style="color:#ae81ff">10</span> -R $share</span></span></code></pre></div>
-<p>Mount share</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mount -t cifs -o <span style="color:#e6db74">&#34;username=</span>$user<span style="color:#e6db74">,password=</span>$password<span style="color:#e6db74">&#34;</span> //$ip/$share /mnt/secure</span></span></code></pre></div>
-<h2 id="share-permissions">Share Permissions</h2>
-<p>Check share permissions</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbcacls --no-pass //$ip/$share</span></span></code></pre></div>
-<h2 id="change-password">Change Password</h2>
-<p>Change users password</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbpasswd -r $ip -U $user</span></span></code></pre></div>
-<h2 id="download-files">Download Files</h2>
-<p>Download all files</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>RECURSE ON
-</span></span><span style="display:flex;"><span>PROMPT OFF
-</span></span><span style="display:flex;"><span>mget *</span></span></code></pre></div>
-<p>Download specific file</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbmap -H $ip --depth <span style="color:#ae81ff">10</span> -R $share --depth <span style="color:#ae81ff">10</span> -A file.txt -q</span></span></code></pre></div>
+<h2 id="general">General</h2>
+<p>Try zone transfer without domain</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig axfr @$ip</span></span></code></pre></div>
+<p>Try zone transfer guessing the domain</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig axfr @$ip $domain</span></span></code></pre></div>
+<p>Regular DNS request</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig ANY @$ip $domain</span></span></code></pre></div>
+<p>IPv6 DNS request</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig AAAA @$ip $domain</span></span></code></pre></div>
+<p>Get TXT Records</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig TXT @$ip $domain</span></span></code></pre></div>
+<p>Get MX Records</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig MX @$ip $domain</span></span></code></pre></div>
+<p>Get NS records of the given domain</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig NS @$ip $domain</span></span></code></pre></div>
+<p>Reverse lookup</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -x 192.168.0.2 @$ip</span></span></code></pre></div>
+<p>Reverse IPv6 lookup</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -x 2a00:1450:400c:c06::93 @$ip</span></span></code></pre></div>
+<p>dnsenum</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dnsenum $domain</span></span></code></pre></div>
+<p>dnsrecon - automates the process of enumerating DNS records and finding related domains</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"></code></pre></div>
+<h2 id="subdomains">Subdomains</h2>
+<p>Gobuster</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gobuster vhost -u $domain -w /usr/share/dirb/wordlists/big.txt</span></span></code></pre></div>
 
   <footer class="footline">
   </footer>
@@ -283,10 +253,10 @@ smbmap -H $ip Check Null Sessions">
             <li class="parent " data-nav-id="/enumeration/hosts/index.html"><input type="checkbox" id="R-section-1f61669d703c60f3bfc1fab237a82b8b" aria-controls="R-subsections-1f61669d703c60f3bfc1fab237a82b8b" checked><label for="R-section-1f61669d703c60f3bfc1fab237a82b8b"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Hosts</span></label><a class="padding" href="../../../../enumeration/hosts/index.html">Hosts</a><ul id="R-subsections-1f61669d703c60f3bfc1fab237a82b8b" class="collapsible-menu">
             <li class="" data-nav-id="/enumeration/hosts/port-scanning/index.html"><a class="padding" href="../../../../enumeration/hosts/port-scanning/index.html">Port Scanning</a></li>
             <li class="parent " data-nav-id="/enumeration/hosts/services/index.html"><input type="checkbox" id="R-section-2995839649a9e84718c2ac498b858682" aria-controls="R-subsections-2995839649a9e84718c2ac498b858682" checked><label for="R-section-2995839649a9e84718c2ac498b858682"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Services</span></label><a class="padding" href="../../../../enumeration/hosts/services/index.html">Services</a><ul id="R-subsections-2995839649a9e84718c2ac498b858682" class="collapsible-menu">
-            <li class="" data-nav-id="/enumeration/hosts/services/domain-name-system/index.html"><a class="padding" href="../../../../enumeration/hosts/services/domain-name-system/index.html">Domain Name System (DNS)</a></li>
+            <li class="active " data-nav-id="/enumeration/hosts/services/domain-name-system/index.html"><a class="padding" href="../../../../enumeration/hosts/services/domain-name-system/index.html">Domain Name System (DNS)</a></li>
             <li class="" data-nav-id="/enumeration/hosts/services/file-transfer-protocol-ftp/index.html"><a class="padding" href="../../../../enumeration/hosts/services/file-transfer-protocol-ftp/index.html">File Transfer Protocol (FTP)</a></li>
             <li class="" data-nav-id="/enumeration/hosts/services/network-file-system-nfs/index.html"><a class="padding" href="../../../../enumeration/hosts/services/network-file-system-nfs/index.html">Network File System (NFS)</a></li>
-            <li class="active " data-nav-id="/enumeration/hosts/services/server-message-block-smb/index.html"><a class="padding" href="../../../../enumeration/hosts/services/server-message-block-smb/index.html">Server Message Block (SMB)</a></li></ul></li></ul></li></ul></li>
+            <li class="" data-nav-id="/enumeration/hosts/services/server-message-block-smb/index.html"><a class="padding" href="../../../../enumeration/hosts/services/server-message-block-smb/index.html">Server Message Block (SMB)</a></li></ul></li></ul></li></ul></li>
             <li class="" data-nav-id="/exploitation/index.html"><a class="padding" href="../../../../exploitation/index.html">Exploitation</a></li>
           </ul>
         </div>
@@ -302,7 +272,7 @@ smbmap -H $ip Check Null Sessions">
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="../../../../enumeration/hosts/services/server-message-block-smb/index.html" lang="en-us" selected></option>
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="../../../../enumeration/hosts/services/domain-name-system/index.html" lang="en-us" selected></option>
                     </select>
                   </div>
                   <div class="clear"></div>

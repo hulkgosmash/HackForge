@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Port Scanning :: HackForge</title><link>https://example.org/enumeration/hosts/port-scanning/index.html</link><description/><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/enumeration/hosts/port-scanning/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Port Scanning :: HackForge</title>
+    <link>http://localhost:1313/enumeration/hosts/port-scanning/index.html</link>
+    <description>Initial Scans Quick Port Scan (Fast finds open ports)&#xA;masscan -e tun0 -p 1-65535 --rate 2000 $ip Vulnerability scan (Run all vulnerability scripts )&#xA;nmap -script=vuln $ip nmap UDP scan&#xA;nmap $ip -p- -sU -oA AutoRecon&#xA;~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip Export TCP Ports to markdown&#xA;/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml &gt; ports.txt; mousepad ports.txt Export UDP Ports to markdown&#xA;/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml &gt; ports.txt; mousepad ports.txt NMAP Host Discovery - Scan Network Range</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/enumeration/hosts/port-scanning/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

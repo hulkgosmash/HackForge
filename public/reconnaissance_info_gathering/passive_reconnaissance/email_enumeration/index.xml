@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Email Enumeration :: HackForge</title>
+    <link>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html</link>
+    <description>Email Enumeration Basics Check if an Email Exists Have I Been Pwned – https://haveibeenpwned.com/&#xA;EmailRep.io – https://emailrep.io/&#xA;Hunter.io – https://hunter.io/email-verifier&#xA;Verify Email Address – https://verifalia.com/&#xA;Command-Line Email Verification Find emails for a domain&#xA;theHarvester -d $ip -b all Extract emails from a domain&#xA;emailfinder -d $ip Extract emails from documents&#xA;metagoofil -d $ip -t pdf,doc,xls -o results/ Finding Emails from Social Media LinkedIn Email Enumeration site:linkedin.com/in &#34;@$ip&#34; Lusha – https://www.lusha.com/&#xA;Snov.io – https://snov.io/</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

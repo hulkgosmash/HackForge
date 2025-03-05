@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WHOIS &amp; Domain Enumeration :: HackForge</title>
+    <link>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html</link>
+    <description>Basic WHOIS Lookup Command-Line WHOIS Basic domain WHOIS lookup&#xA;whois $ip Query a specific WHOIS server&#xA;whois -h whois.verisign-grs.com $ip Show detailed results (Linux)&#xA;whois --verbose $ip Online WHOIS Services Whois Lookup (ICANN)&#xA;Whois Domain Tools&#xA;WhoXY&#xA;Extracting Nameservers &amp; DNS Records Query Nameservers nslookup -type=NS $ip dig NS $ip host -t ns $ip Query MX Records (Mail Servers) nslookup -type=MX $ip dig MX $ip host -t mx $ip Query TXT Records (SPF, DKIM, DMARC, etc.) nslookup -type=TXT $ip dig TXT $ip host -t txt $ip Subdomain Enumeration Brute-Force Subdomains sublist3r -d $ip amass enum -d $ip assetfinder --subs-only $ip dnsrecon -d $ip -t brt Passive Subdomain Enumeration crt.sh → Certificate Transparency logs</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

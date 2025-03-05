@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Domain Name System (DNS) :: HackForge</title>
+    <link>http://localhost:1313/enumeration/hosts/services/domain-name-system/index.html</link>
+    <description>General Try zone transfer without domain&#xA;dig axfr @$ip Try zone transfer guessing the domain&#xA;dig axfr @$ip $domain Regular DNS request&#xA;dig ANY @$ip $domain IPv6 DNS request&#xA;dig AAAA @$ip $domain Get TXT Records&#xA;dig TXT @$ip $domain Get MX Records&#xA;dig MX @$ip $domain Get NS records of the given domain&#xA;dig NS @$ip $domain Reverse lookup&#xA;dig -x 192.168.0.2 @$ip Reverse IPv6 lookup</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/enumeration/hosts/services/domain-name-system/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

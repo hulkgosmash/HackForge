@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network File System (NFS) :: HackForge</title>
+    <link>http://localhost:1313/enumeration/hosts/services/network-file-system-nfs/index.html</link>
+    <description>General Show mounts&#xA;showmount -e $ip Mount Share&#xA;mount -t nfs [-o vers=2] $ip:&lt;remote_folder&gt; &lt;local_folder&gt; -o nolock mount $IP:/ /tmp/NFS Dismount Shares&#xA;umount -l tmp/NFS</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/enumeration/hosts/services/network-file-system-nfs/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
