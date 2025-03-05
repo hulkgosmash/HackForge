@@ -3,7 +3,7 @@
   <channel>
     <title>HackForge</title>
     <link>http://localhost:1313/index.html</link>
-    <description>This is your new home page.</description>
+    <description>Overview HackForge Pentest Cheat Sheet is an interactive penetration testing reference that dynamically updates enumeration and exploitation commands based on user input. This tool is particularly useful for reconnaissance, enumeration, exploitation, and post-exploitation during security assessments.&#xA;Features Dynamic Command Generation – Enter hostnames, IPs, or other parameters to get real-time tailored command outputs. Comprehensive Pentest Categories – Covers everything from host enumeration, service scanning, and privilege escalation to Active Directory attacks. Tool-Specific Cheatsheets – Pre-configured commands for tools like Nmap, Masscan, CrackMapExec, Impacket, BloodHound, Metasploit, and more. Offline &amp; Lightweight – The website is lightweight and easy to reference even with limited connectivity.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
@@ -12,7 +12,7 @@
       <link>http://localhost:1313/reconnaissance_info_gathering/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/reconnaissance_info_gathering/index.html</guid>
-      <description>Passive Reconnaissance</description>
+      <description>Passive Reconnaissance&#xA;Active Reconnaissance</description>
     </item>
   </channel>
 </rss>

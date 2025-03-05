@@ -25,8 +25,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering",
-    "content": "",
-    "description": "",
+    "content": "Port Scanning (Nmap, Masscan)\nService Enumeration\nBanner_Grabbing",
+    "description": "Port Scanning (Nmap, Masscan)\nService Enumeration\nBanner_Grabbing",
     "tags": [],
     "title": "Active Reconnaissance",
     "uri": "/reconnaissance_info_gathering/active_reconnaissance/index.html"
@@ -38,6 +38,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Service Enumeration",
     "uri": "/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance \u003e  Service Enumeration",
+    "content": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains\nnmap -p 53 --script dns-brute $ip Extract name server details\nnmap -p 53 --script dns-nsid $ip Manual DNS Enumeration Get all available DNS records\ndig $ip ANY Perform DNS lookup\nhost -a $ip Retrieve all DNS records\nnslookup -query=ANY $ip FTP (File Transfer Protocol) Enumeration Nmap FTP Scripts Check for anonymous login\nnmap -p 21 --script ftp-anon $ip Check for VSFTPD vulnerabilities\nnmap -p 21 --script ftp-vsftpd-backdoor $ip Manual FTP Enumeration Connect to FTP\nftp $ip Grab FTP banner\nnc -v $ip 21 Banner grabbing\ntelnet $ip 21",
+    "description": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains",
+    "tags": [],
+    "title": "Service Enumeration",
+    "uri": "/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/dns/index.html"
   },
   {
     "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Passive Reconnaissance",
@@ -65,8 +73,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "HackForge",
-    "content": "Passive Reconnaissance",
-    "description": "Passive Reconnaissance",
+    "content": "Passive Reconnaissance\nActive Reconnaissance",
+    "description": "Passive Reconnaissance\nActive Reconnaissance",
     "tags": [],
     "title": "1. Reconnaissance \u0026 Information Gathering",
     "uri": "/reconnaissance_info_gathering/index.html"
@@ -81,8 +89,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "This is your new home page.",
-    "description": "This is your new home page.",
+    "content": "Overview HackForge Pentest Cheat Sheet is an interactive penetration testing reference that dynamically updates enumeration and exploitation commands based on user input. This tool is particularly useful for reconnaissance, enumeration, exploitation, and post-exploitation during security assessments.\nFeatures Dynamic Command Generation – Enter hostnames, IPs, or other parameters to get real-time tailored command outputs. Comprehensive Pentest Categories – Covers everything from host enumeration, service scanning, and privilege escalation to Active Directory attacks. Tool-Specific Cheatsheets – Pre-configured commands for tools like Nmap, Masscan, CrackMapExec, Impacket, BloodHound, Metasploit, and more. Offline \u0026 Lightweight – The website is lightweight and easy to reference even with limited connectivity.",
+    "description": "Overview HackForge Pentest Cheat Sheet is an interactive penetration testing reference that dynamically updates enumeration and exploitation commands based on user input. This tool is particularly useful for reconnaissance, enumeration, exploitation, and post-exploitation during security assessments.\nFeatures Dynamic Command Generation – Enter hostnames, IPs, or other parameters to get real-time tailored command outputs. Comprehensive Pentest Categories – Covers everything from host enumeration, service scanning, and privilege escalation to Active Directory attacks. Tool-Specific Cheatsheets – Pre-configured commands for tools like Nmap, Masscan, CrackMapExec, Impacket, BloodHound, Metasploit, and more. Offline \u0026 Lightweight – The website is lightweight and easy to reference even with limited connectivity.",
     "tags": [],
     "title": "HackForge",
     "uri": "/index.html"

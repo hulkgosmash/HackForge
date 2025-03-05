@@ -3,7 +3,7 @@
   <channel>
     <title>Active Reconnaissance :: HackForge</title>
     <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/index.html</link>
-    <description></description>
+    <description>Port Scanning (Nmap, Masscan)&#xA;Service Enumeration&#xA;Banner_Grabbing</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,7 @@
       <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html</guid>
-      <description>General Service Enumeration Nmap Service Discovery Detect service versions&#xA;nmap -sV $ip Aggressive version detection&#xA;nmap -sV --version-all $ip Scan all ports and detect services&#xA;nmap -p- -sV $ip Run default scripts for enumeration&#xA;nmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service&#xA;nc -v $ip 80 SMTP enumeration&#xA;telnet $ip 25 Get HTTP headers&#xA;curl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains</description>
+      <description>General Service Enumeration Nmap Service Discovery Detect service versions&#xA;nmap -sV $ip Aggressive version detection&#xA;nmap -sV --version-all $ip Scan all ports and detect services&#xA;nmap -p- -sV $ip Run default scripts for enumeration&#xA;nmap -sC -sV $ip</description>
     </item>
     <item>
       <title>Banner Grabbing</title>

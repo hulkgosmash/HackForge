@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Domain Name System (DNS) :: HackForge</title>
+    <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/dns/index.html</link>
+    <description>Nmap DNS Enumeration Brute-force subdomains&#xA;nmap -p 53 --script dns-brute $ip Extract name server details&#xA;nmap -p 53 --script dns-nsid $ip Comprehensive scripts&#xA;nmap -n --script &#34;(default and *dns*) or fcrdns or dns-srv-enum or dns-random-txid or dns-random-srcport&#34; $ip Manual DNS Enumeration General Get all available DNS records&#xA;dig $ip ANY Perform DNS lookup&#xA;host -a $ip Retrieve all DNS records&#xA;nslookup -query=ANY $ip Regular DNS request&#xA;dig ANY @$ip $domain IPv6 DNS request</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/dns/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
