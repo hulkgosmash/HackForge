@@ -1,6 +1,8 @@
 +++
 menus = 'main'
-title = 'Enumeration'
+title = 'Active Reconnaissance'
 collapsibleMenu = true
 alwaysopen = false
+weight = 20
 +++
+

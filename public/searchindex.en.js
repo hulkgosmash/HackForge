@@ -1,19 +1,75 @@
 var relearn_searchindex = [
   {
-    "breadcrumb": "HackForge",
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Passive Reconnaissance",
+    "content": "Search Engines \u0026 Advanced Queries Google Dorking Search within a specific site\nsite:$ip Find open directories\nintitle:\"index of\" Find open directories\nintitle:\"index of\" Search for specific file types\nfiletype:pdf Find admin panels\ninurl:admin View cached pages\ncache:$ip Search for emails\n\"$user@gmail.com\" Alternative Search Engines DuckDuckGo – Privacy-focused search\nBing/Yandex – Different indexing results\nShodan – IoT \u0026 network scanning\nSocial Media OSINT User Enumeration Facebook:\nsite:facebook.com \"$user\" Twitter\nsite:twitter.com \"@$user\" LinkedIn\nsite:linkedin.com/in/ \"$user\" Instagram\nsite:instagram.com \"@$user\" Tools for Social Media Analysis Sherlock – Username lookup\nTwint – Twitter scraping\nSocinvestigate – Social media OSINT\nDark Web OSINT Tools \u0026 Resources OnionSearch – Search .onion sites\nAhmia – Dark web search engine\nTor2Web – Access .onion without Tor\nPeople \u0026 Address Lookups General Person Search Pipl – People search engine\nSpokeo – Reverse lookup\nPeekYou – Social profile aggregation\nGeolocation \u0026 Maps Google Earth – Satellite imagery\nGeoGuessr – Geolocation challenge\nIP2Location – Locate IP addresses\nImage \u0026 Metadata Analysis Reverse Image Search Google Reverse Image – Find similar images\nYandex Images – Strong image search\nTineye – Reverse image search\nMetadata Extraction ExifTool – Extract EXIF data\nFotoForensics – Image analysis\nJeffrey’s Image Metadata Viewer – View hidden data\nOSINT Automation Tools SpiderFoot – Automated OSINT framework\nMaltego – Graph-based link analysis\nRecon-ng – Web reconnaissance\ntheHarvester – Email, subdomain \u0026 IP reconnaissance",
+    "description": "Search Engines \u0026 Advanced Queries Google Dorking Search within a specific site\nsite:$ip Find open directories\nintitle:\"index of\" Find open directories\nintitle:\"index of\" Search for specific file types\nfiletype:pdf Find admin panels\ninurl:admin View cached pages\ncache:$ip Search for emails\n\"$user@gmail.com\" Alternative Search Engines DuckDuckGo – Privacy-focused search\nBing/Yandex – Different indexing results\nShodan – IoT \u0026 network scanning\nSocial Media OSINT User Enumeration Facebook:",
+    "tags": [],
+    "title": "OSINT",
+    "uri": "/reconnaissance_info_gathering/passive_reconnaissance/osint/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering",
+    "content": "OSINT\nWHOIS \u0026 Domain Enumeration\nEmail Enumeration",
+    "description": "OSINT\nWHOIS \u0026 Domain Enumeration\nEmail Enumeration",
+    "tags": [],
+    "title": "Passive Reconnaissance",
+    "uri": "/reconnaissance_info_gathering/passive_reconnaissance/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance",
+    "content": "Basic Nmap Scans Quick Scan Basic scan (default 1000 ports)\nnmap $ip Scan all ports\nnmap -p 1-65535 $ip Stealth SYN scan\nnmap -sS $ip Full TCP connection scan\nnmap -sT $ip Aggressive Scan OS, services, and version detection\nnmap -A $ip Aggressive fast scan\nnmap -T4 -A -v $ip Scanning Specific Ports Scan specific ports\nnmap -p 22,80,443 $ip Scan all 65,535 ports\nnmap -p- $ip Scan first 1000 ports\nnmap -p 1-1000 $ip Service \u0026 Version Detection Detect services and versions\nnmap -sV $ip More aggressive version detection\nnmap -sV --version-intensity 5 $ip OS Detection Detect OS\nnmap -O $ip OS and service detection\nnmap -A $ip Skip host discovery (useful for firewalled hosts)\nnmap -Pn $ip Evading Firewalls \u0026 IDS Slow stealth scan\nnmap -sS -T2 $ip Fragmented packets scan\nnmap -f $ip Use custom MTU (bypass filters)\nnmap --mtu 16 $ip Use decoys\nnmap -D RND:10 $ip Randomize payload size\nnmap --data-length 200 $ip UDP Scanning Scan specific UDP ports\nnmap -sU -p 53,161 $ip Full UDP scan\nnmap -sU -p- $ip Scanning Multiple Hosts Scan a range of IPs\nnmap 192.168.1.1-100 Scan from a file\nnmap -iL targets.txt Ping sweep to find live hosts\nnmap -sn 192.168.1.0/24 Output \u0026 Logging Save output in normal format\nnmap -oN output.txt $ip Save output in XML\nnmap -oX output.xml $ip Save in greppable format\nnmap -oG output.gnmap $ip Save in all formats\nnmap -oA fullscan $ip Advanced \u0026 Specialized Scans Scan Hosts Inside a Network Identify live hosts\nnmap -sn 192.168.1.0/24 Ping sweep\nnmap -sP 192.168.1.0/24 Detecting Vulnerabilities Run built-in vulnerability scans\nnmap --script vuln $ip Scan for HTTP vulnerabilities\nnmap --script http-vuln* $ip Scanning for Specific Services Scan for SMB OS info\nnmap -p 445 --script smb-os-discovery $ip Scan MySQL version\nnmap -p 3306 --script mysql-info $ip Additional Tools for Port Scanning Masscan\nmasscan -p1-65535 --rate=1000 $ip Unicornscan\nunicornscan -i eth0 -mT $ip Zmap\nzmap -p 443 -o results.txt 192.168.1.0/24",
+    "description": "Basic Nmap Scans Quick Scan Basic scan (default 1000 ports)\nnmap $ip Scan all ports\nnmap -p 1-65535 $ip Stealth SYN scan\nnmap -sS $ip Full TCP connection scan\nnmap -sT $ip Aggressive Scan OS, services, and version detection\nnmap -A $ip Aggressive fast scan\nnmap -T4 -A -v $ip Scanning Specific Ports Scan specific ports\nnmap -p 22,80,443 $ip Scan all 65,535 ports",
+    "tags": [],
+    "title": "Port Scanning (Nmap, Masscan)",
+    "uri": "/reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "1. Reconnaissance \u0026 Information Gathering",
-    "uri": "/reconnaissance_info_gathering/index.html"
+    "title": "Active Reconnaissance",
+    "uri": "/reconnaissance_info_gathering/active_reconnaissance/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance",
+    "content": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains\nnmap -p 53 --script dns-brute $ip Extract name server details\nnmap -p 53 --script dns-nsid $ip Manual DNS Enumeration Get all available DNS records\ndig $ip ANY Perform DNS lookup\nhost -a $ip Retrieve all DNS records\nnslookup -query=ANY $ip FTP (File Transfer Protocol) Enumeration Nmap FTP Scripts Check for anonymous login\nnmap -p 21 --script ftp-anon $ip Check for VSFTPD vulnerabilities\nnmap -p 21 --script ftp-vsftpd-backdoor $ip Manual FTP Enumeration Connect to FTP\nftp $ip Grab FTP banner\nnc -v $ip 21 Banner grabbing\ntelnet $ip 21",
+    "description": "General Service Enumeration Nmap Service Discovery Detect service versions\nnmap -sV $ip Aggressive version detection\nnmap -sV --version-all $ip Scan all ports and detect services\nnmap -p- -sV $ip Run default scripts for enumeration\nnmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service\nnc -v $ip 80 SMTP enumeration\ntelnet $ip 25 Get HTTP headers\ncurl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains",
+    "tags": [],
+    "title": "Service Enumeration",
+    "uri": "/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Passive Reconnaissance",
+    "content": "Basic WHOIS Lookup Command-Line WHOIS Basic domain WHOIS lookup\nwhois $ip Query a specific WHOIS server\nwhois -h whois.verisign-grs.com $ip Show detailed results (Linux)\nwhois --verbose $ip Online WHOIS Services Whois Lookup (ICANN)\nWhois Domain Tools\nWhoXY\nExtracting Nameservers \u0026 DNS Records Query Nameservers nslookup -type=NS $ip dig NS $ip host -t ns $ip Query MX Records (Mail Servers) nslookup -type=MX $ip dig MX $ip host -t mx $ip Query TXT Records (SPF, DKIM, DMARC, etc.) nslookup -type=TXT $ip dig TXT $ip host -t txt $ip Subdomain Enumeration Brute-Force Subdomains sublist3r -d $ip amass enum -d $ip assetfinder --subs-only $ip dnsrecon -d $ip -t brt Passive Subdomain Enumeration crt.sh → Certificate Transparency logs\nThreatCrowd → OSINT subdomain lookup\nVirusTotal → Find subdomains via DNS queries\nZone Transfer (AXFR Attack Check) Try Zone Transfer (If Misconfigured) dig AXFR example.com @ns1.$ip host -l example.com ns1.$ip dnsrecon -d $ip -t axfr Reverse DNS Lookup Find Domain Associated with an IP nslookup $ip dig -x $ip host $ip Find Subdomains via Reverse Lookups dnsrecon -r 192.168.1.0/24 fierce -dns $ip Use DNS module for reverse lookups\nrecon-ng Online DNS \u0026 WHOIS Tools SecurityTrails → Historical DNS records\nSpyse → Advanced domain intelligence\nRobtex → DNS \u0026 network graphing\nViewDNS.info → DNS \u0026 WHOIS lookup tools\nAutomation \u0026 OSINT Tools for Domain Intelligence theHarvester → Email, subdomains, and hosts reconnaissance\nSubfinder → Fast passive subdomain discovery\nAmass → OSINT-powered subdomain enumeration\nMassDNS → High-performance DNS resolver\nNmap → Scan domains for open services\nnmap -p80,443 $ip",
+    "description": "Basic WHOIS Lookup Command-Line WHOIS Basic domain WHOIS lookup\nwhois $ip Query a specific WHOIS server\nwhois -h whois.verisign-grs.com $ip Show detailed results (Linux)\nwhois --verbose $ip Online WHOIS Services Whois Lookup (ICANN)\nWhois Domain Tools\nWhoXY\nExtracting Nameservers \u0026 DNS Records Query Nameservers nslookup -type=NS $ip dig NS $ip host -t ns $ip Query MX Records (Mail Servers) nslookup -type=MX $ip dig MX $ip host -t mx $ip Query TXT Records (SPF, DKIM, DMARC, etc.) nslookup -type=TXT $ip dig TXT $ip host -t txt $ip Subdomain Enumeration Brute-Force Subdomains sublist3r -d $ip amass enum -d $ip assetfinder --subs-only $ip dnsrecon -d $ip -t brt Passive Subdomain Enumeration crt.sh → Certificate Transparency logs",
+    "tags": [],
+    "title": "WHOIS \u0026 Domain Enumeration",
+    "uri": "/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Active Reconnaissance",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Banner Grabbing",
+    "uri": "/reconnaissance_info_gathering/active_reconnaissance/banner_grabbing/index.html"
+  },
+  {
+    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Passive Reconnaissance",
+    "content": "Email Enumeration Basics Check if an Email Exists Have I Been Pwned – https://haveibeenpwned.com/\nEmailRep.io – https://emailrep.io/\nHunter.io – https://hunter.io/email-verifier\nVerify Email Address – https://verifalia.com/\nCommand-Line Email Verification Find emails for a domain\ntheHarvester -d $ip -b all Extract emails from a domain\nemailfinder -d $ip Extract emails from documents\nmetagoofil -d $ip -t pdf,doc,xls -o results/ Finding Emails from Social Media LinkedIn Email Enumeration site:linkedin.com/in \"@$ip\" Lusha – https://www.lusha.com/\nSnov.io – https://snov.io/\nTwitter Email Lookup site:twitter.com \"@$ip\" Twitter OSINT - https://tinfoleak.com/ Email Format Discovery Find Email Patterns for a Domain Hunter.io – Find email naming conventions\nVoilaNorbert – Verify email patterns\nClearbit Connect – Gmail plugin for email discovery\nGenerate Possible Emails email-permutator -d example.com -f \"John\" -l \"Doe\" Test email validity\nswaks --to johndoe@$ip --server mx.example.com SMTP \u0026 MX Server Enumeration Identify Email Servers nslookup -type=MX $ip dig MX $ip host -t mx $ip Verify Email with SMTP telnet mail.$ip 25 Check if the email exists\nVRFY johndoe@$ip Check mailing lists\nEXPN johndoe@$ip Email Header Analysis Extract Headers from an Email Gmail: Open email → Click More → Show original\nOutlook: Open email → File → Properties → Internet headers\nAnalyze Headers MXToolBox – https://mxtoolbox.com/\nEmail Header Analyzer – https://www.whatismyip.com/email-header-analyzer/\nGoogle Admin Toolbox – https://toolbox.googleapps.com/apps/messageheader/\nAutomating Email OSINT Tools for Email Enumeration theHarvester\ntheHarvester -d $ip -b google Recon-ng\nrecon/domains-contacts/email_address GHunt – Analyze Google-based email accounts\nHolehe – Check if an email is linked to social media",
+    "description": "Email Enumeration Basics Check if an Email Exists Have I Been Pwned – https://haveibeenpwned.com/\nEmailRep.io – https://emailrep.io/\nHunter.io – https://hunter.io/email-verifier\nVerify Email Address – https://verifalia.com/\nCommand-Line Email Verification Find emails for a domain\ntheHarvester -d $ip -b all Extract emails from a domain\nemailfinder -d $ip Extract emails from documents\nmetagoofil -d $ip -t pdf,doc,xls -o results/ Finding Emails from Social Media LinkedIn Email Enumeration site:linkedin.com/in \"@$ip\" Lusha – https://www.lusha.com/\nSnov.io – https://snov.io/",
+    "tags": [],
+    "title": "Email Enumeration",
+    "uri": "/reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html"
   },
   {
     "breadcrumb": "HackForge",
-    "content": "Services",
-    "description": "Services",
+    "content": "Passive Reconnaissance",
+    "description": "Passive Reconnaissance",
     "tags": [],
-    "title": "Brute Force",
-    "uri": "/bruteforce/index.html"
+    "title": "1. Reconnaissance \u0026 Information Gathering",
+    "uri": "/reconnaissance_info_gathering/index.html"
   },
   {
     "breadcrumb": "HackForge",
@@ -24,108 +80,12 @@ var relearn_searchindex = [
     "uri": "/categories/index.html"
   },
   {
-    "breadcrumb": "HackForge \u003e  Enumeration \u003e  Hosts \u003e  Services",
-    "content": "General Try zone transfer without domain\ndig axfr @$ip Try zone transfer guessing the domain\ndig axfr @$ip $domain Regular DNS request\ndig ANY @$ip $domain IPv6 DNS request\ndig AAAA @$ip $domain Get TXT Records\ndig TXT @$ip $domain Get MX Records\ndig MX @$ip $domain Get NS records of the given domain\ndig NS @$ip $domain Reverse lookup\ndig -x 192.168.0.2 @$ip Reverse IPv6 lookup\ndig -x 2a00:1450:400c:c06::93 @$ip dnsenum\ndnsenum $domain dnsrecon - automates the process of enumerating DNS records and finding related domains\nSubdomains Gobuster\ngobuster vhost -u $domain -w /usr/share/dirb/wordlists/big.txt",
-    "description": "General Try zone transfer without domain\ndig axfr @$ip Try zone transfer guessing the domain\ndig axfr @$ip $domain Regular DNS request\ndig ANY @$ip $domain IPv6 DNS request\ndig AAAA @$ip $domain Get TXT Records\ndig TXT @$ip $domain Get MX Records\ndig MX @$ip $domain Get NS records of the given domain\ndig NS @$ip $domain Reverse lookup\ndig -x 192.168.0.2 @$ip Reverse IPv6 lookup",
-    "tags": [],
-    "title": "Domain Name System (DNS)",
-    "uri": "/enumeration/hosts/services/domain-name-system/index.html"
-  },
-  {
-    "breadcrumb": "HackForge",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Enumeration",
-    "uri": "/enumeration/index.html"
-  },
-  {
-    "breadcrumb": "HackForge",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Exploitation",
-    "uri": "/exploitation/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  Enumeration \u003e  Hosts \u003e  Services",
-    "content": "General Create an active connection\nftp $ip Create a passive connection (If you can’t see files it may help)\nftp -p $ip List all files\nls -lah Download multiple files\nprompt mget * Download all files using wget\nwget -r ftp://$user:$password@$ip/ View the directory contents with curl\ncurl -s -v 'ftp://$user:$password@$ip/' View directory contents with curl in passive mode\ncurl -s -v -P - 'ftp://$user:$password@$ip/' Upload a file with curl\ncurl -T \"file.txt\" -P - 'ftp://$user:$password@$ip/' nmap scripts\nnmap --script=ftp-anon,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221,tftp-enum -p 21 $ip",
-    "description": "General Create an active connection\nftp $ip Create a passive connection (If you can’t see files it may help)\nftp -p $ip List all files\nls -lah Download multiple files\nprompt mget * Download all files using wget\nwget -r ftp://$user:$password@$ip/ View the directory contents with curl\ncurl -s -v 'ftp://$user:$password@$ip/' View directory contents with curl in passive mode\ncurl -s -v -P - 'ftp://$user:$password@$ip/' Upload a file with curl",
-    "tags": [],
-    "title": "File Transfer Protocol (FTP)",
-    "uri": "/enumeration/hosts/services/file-transfer-protocol-ftp/index.html"
-  },
-  {
     "breadcrumb": "",
     "content": "This is your new home page.",
     "description": "This is your new home page.",
     "tags": [],
     "title": "HackForge",
     "uri": "/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  Enumeration",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Hosts",
-    "uri": "/enumeration/hosts/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  Enumeration \u003e  Hosts \u003e  Services",
-    "content": "General Show mounts\nshowmount -e $ip Mount Share\nmount -t nfs [-o vers=2] $ip:\u003cremote_folder\u003e \u003clocal_folder\u003e -o nolock mount $IP:/ /tmp/NFS Dismount Shares\numount -l tmp/NFS",
-    "description": "General Show mounts\nshowmount -e $ip Mount Share\nmount -t nfs [-o vers=2] $ip:\u003cremote_folder\u003e \u003clocal_folder\u003e -o nolock mount $IP:/ /tmp/NFS Dismount Shares\numount -l tmp/NFS",
-    "tags": [],
-    "title": "Network File System (NFS)",
-    "uri": "/enumeration/hosts/services/network-file-system-nfs/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Passive Reconnaissance",
-    "uri": "/reconnaissance_info_gathering/passive_reconnaissance/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  1. Reconnaissance \u0026 Information Gathering \u003e  Passive Reconnaissance",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Passive Reconnaissance",
-    "uri": "/reconnaissance_info_gathering/passive_reconnaissance/osint/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  Enumeration \u003e  Hosts",
-    "content": "Initial Scans Quick Port Scan (Fast finds open ports)\nmasscan -e tun0 -p 1-65535 --rate 2000 $ip Vulnerability scan (Run all vulnerability scripts )\nnmap -script=vuln $ip nmap UDP scan\nnmap $ip -p- -sU -oA AutoRecon\n~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip Export TCP Ports to markdown\n/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml \u003e ports.txt; mousepad ports.txt Export UDP Ports to markdown\n/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml \u003e ports.txt; mousepad ports.txt NMAP Host Discovery - Scan Network Range\nnmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d\" \" -f5 Host Discovery - Scan IP List\nnmap -sn -oA tnet -iL hosts.lst | grep for | cut -d\" \" -f5 Host Discovery - Scan Multiple IPs\nnmap -sn -oA tnet 10.129.2.18 10.129.2.19 10.129.2.20| grep for | cut -d\" \" -f5 Host Discovery - Scan Multiple IPs\nnmap -sn -oA tnet 10.129.2.18-20| grep for | cut -d\" \" -f5 Host Discovery - Scan Single IP\nnmap 10.129.2.18 -sn -oA host Discovering Open TCP Ports\nnmap 10.129.2.28 --top-ports=10 Discovering Open UDP Ports\nnmap 10.129.2.28 -F -sU Service Discovery\nnmap $ip -p- -sV Service Discovery\nnmap 10.129.2.28 -p- -sV --stats-every=5s Service Discovery\nnmap 10.129.2.28 -p- -sV -v Service Discovery\nnmap 10.129.2.28 -p- -sV -Pn -n --disable-arp-ping --packet-trace",
-    "description": "Initial Scans Quick Port Scan (Fast finds open ports)\nmasscan -e tun0 -p 1-65535 --rate 2000 $ip Vulnerability scan (Run all vulnerability scripts )\nnmap -script=vuln $ip nmap UDP scan\nnmap $ip -p- -sU -oA AutoRecon\n~/AutoRecon/autorecon.py --single-target --only-scans-dir $ip Export TCP Ports to markdown\n/opt/nmap2md/nmap2md.py results/scans/xml/_full_tcp_nmap.xml \u003e ports.txt; mousepad ports.txt Export UDP Ports to markdown\n/opt/nmap2md/nmap2md.py results/scans/xml/_top_20_udp_nmap.xml \u003e ports.txt; mousepad ports.txt NMAP Host Discovery - Scan Network Range",
-    "tags": [],
-    "title": "Port Scanning",
-    "uri": "/enumeration/hosts/port-scanning/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  Enumeration \u003e  Hosts \u003e  Services",
-    "content": "Initial Scans Netbios scan\nnbtscan -r $ip Enumerate host name\nnmblookup -A $ip List Shares #1 (specifying guest account)\nsmbmap -H $ip -u guest List Shares #2\nsmbclient -L \\\\$ip List Shares #3\ncrackmapexec smb $ip --shares List Shares with credentials\nsmbmap -u $user -p $password -R -H $ip Exhaustive Scan\nenum4linux -a -M -l -d $ip Check Null Sessions\nsmbmap -H $ip Check Null Sessions\nrpcclient -U \"\" -N $ip Check Null Sessions\nenum4linux -a -M -l -d $ip Check Null Sessions\nsmbclient \\\\\\\\$ip\\\\$share Vulnerability scan\nnmap --script smb-vuln* -p 139,445 $ip Verify Credentials\ncrackmapexec smb $ip -u $user -p $password User brute force\ncrackmapexec smb $ip -u anonymous -p \"\" --rid-brute 10000 Connect to shares Connect\nsmbclient //$ip/$share Connect with credentials\nsmbclient //$ip/$share -U $user Connect with credentials\nsmbclient \\\\\\\\$ip\\\\$share -U \"$user\" -p \"$password\" Recursively List Contents\nsmbmap -H $ip --depth 10 -R $share Mount share\nsudo mount -t cifs -o \"username=$user,password=$password\" //$ip/$share /mnt/secure Share Permissions Check share permissions\nsmbcacls --no-pass //$ip/$share Change Password Change users password\nsmbpasswd -r $ip -U $user Download Files Download all files\nRECURSE ON PROMPT OFF mget * Download specific file\nsmbmap -H $ip --depth 10 -R $share --depth 10 -A file.txt -q",
-    "description": "Initial Scans Netbios scan\nnbtscan -r $ip Enumerate host name\nnmblookup -A $ip List Shares #1 (specifying guest account)\nsmbmap -H $ip -u guest List Shares #2\nsmbclient -L \\\\$ip List Shares #3\ncrackmapexec smb $ip --shares List Shares with credentials\nsmbmap -u $user -p $password -R -H $ip Exhaustive Scan\nenum4linux -a -M -l -d $ip Check Null Sessions\nsmbmap -H $ip Check Null Sessions",
-    "tags": [],
-    "title": "Server Message Block (SMB)",
-    "uri": "/enumeration/hosts/services/server-message-block-smb/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  Brute Force",
-    "content": "Services FTP - Known user and rockyou password list\nhydra -t 1 -l $user -P /usr/share/wordlists/rockyou.txt -vV $ip ftp HTTP - hydra http-post request known user\nhydra -l $user -P /usr/share/wordlists/rockyou.txt $ip http-post-form \"\u003cLogin Page\u003e:\u003cRequest Body\u003e:\u003cError Message\u003e\" -v -V HTTP - hydra http-get request known users\nhydra -l $user -P /usr/share/wordlists/rockyou.txt -f $ip http-get /svn -V -I MYSQL - Known user and rockyou password list\nhydra -l $user -P /usr/share/wordlists/rockyou.txt $ip mysql MYSQL - Username list and rockyou password list\nhydra -L users.txt -P /usr/share/wordlists/rockyou.txt $ip mysql MYSQL - Metasploit\nuse auxiliary/scanner/mysql/mysql_login ORACLE - Hydra password attack rockyou password list\nhydra -P /usr/share/wordlists/rockyou.txt -t 32 -s 1521 $ip oracle-listener POP3 - Known user and rockyou password list\nhydra -l $user -P /usr/share/wordlists/rockyou.txt -f $ip pop3 -V RDP - Known user and rockyou password list\nhydra -t 1 -V -f -l $user -P /usr/share/wordlists/rockyou.txt rdp://$ip RDP - Known user and rockyou password list\nncrack -vv --user $user -P /usr/share/wordlists/rockyou.txt rdp://$ip SMB - Metasploit\nuse auxiliary/scanner/smb/smb_login SMB - Known user and rockyou password list\nhydra -t 1 -V -f -l $user -P /usr/share/wordlists/rockyou.txt $ip smb SMB - User \u0026 password list\ncrackmapexec smb $ip -u users.txt -p users.txt --continue-on-success SMTP - Known user and rockyou password list\nhydra -P /usr/share/wordlists/rockyou.txt $ip smtp -V SNMP - Known user and rockyou password list\nhydra -P /usr/share/wordlists/rockyou.txt -v $ip snmp SSH - Enumerate users with metasploit\nuse auxiliary/scanner/ssh/ssh_enumusers SSH - Quick Known user and rockyou password list\nhydra $ip -s 22 ssh -l $user -P /usr/share/seclists/Passwords/Common-Credentials/best1050.txt -F SSH - Known user and rockyou password list\nhydra $ip -s 22 ssh -l $user -P /usr/share/wordlists/rockyou.txt -V -F SSH - Username list and rockyou password list\nhydra -F -L users.txt -P /usr/share/wordlists/rockyou.txt -t 16 $ip",
-    "description": "Services FTP - Known user and rockyou password list\nhydra -t 1 -l $user -P /usr/share/wordlists/rockyou.txt -vV $ip ftp HTTP - hydra http-post request known user\nhydra -l $user -P /usr/share/wordlists/rockyou.txt $ip http-post-form \"\u003cLogin Page\u003e:\u003cRequest Body\u003e:\u003cError Message\u003e\" -v -V HTTP - hydra http-get request known users\nhydra -l $user -P /usr/share/wordlists/rockyou.txt -f $ip http-get /svn -V -I MYSQL - Known user and rockyou password list\nhydra -l $user -P /usr/share/wordlists/rockyou.txt $ip mysql MYSQL - Username list and rockyou password list",
-    "tags": [],
-    "title": "Services",
-    "uri": "/bruteforce/services/index.html"
-  },
-  {
-    "breadcrumb": "HackForge \u003e  Enumeration \u003e  Hosts",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Services",
-    "uri": "/enumeration/hosts/services/index.html"
   },
   {
     "breadcrumb": "HackForge",

@@ -3,7 +3,7 @@
   <channel>
     <title>Passive Reconnaissance :: HackForge</title>
     <link>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/index.html</link>
-    <description></description>
+    <description>OSINT&#xA;WHOIS &amp; Domain Enumeration&#xA;Email Enumeration</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/index.xml" rel="self" type="application/rss+xml" />

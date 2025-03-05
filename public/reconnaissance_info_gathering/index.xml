@@ -3,7 +3,7 @@
   <channel>
     <title>1. Reconnaissance &amp; Information Gathering :: HackForge</title>
     <link>http://localhost:1313/reconnaissance_info_gathering/index.html</link>
-    <description></description>
+    <description>Passive Reconnaissance</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/reconnaissance_info_gathering/index.xml" rel="self" type="application/rss+xml" />
@@ -12,6 +12,13 @@
       <link>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/index.html</guid>
+      <description>OSINT&#xA;WHOIS &amp; Domain Enumeration&#xA;Email Enumeration</description>
+    </item>
+    <item>
+      <title>Active Reconnaissance</title>
+      <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/index.html</guid>
       <description></description>
     </item>
   </channel>

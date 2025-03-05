@@ -1,46 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/reconnaissance_info_gathering/index.html</loc>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/osint/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/bruteforce/index.html</loc>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/whois_and_domain/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/banner_grabbing/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/passive_reconnaissance/email_enumeration/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/reconnaissance_info_gathering/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/categories/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/enumeration/hosts/services/domain-name-system/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/enumeration/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/exploitation/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/enumeration/hosts/services/file-transfer-protocol-ftp/index.html</loc>
-  </url>
-  <url>
     <loc>http://localhost:1313/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/enumeration/hosts/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/enumeration/hosts/services/network-file-system-nfs/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/enumeration/hosts/port-scanning/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/enumeration/hosts/services/server-message-block-smb/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/bruteforce/services/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/enumeration/hosts/services/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/tags/index.html</loc>

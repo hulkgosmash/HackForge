@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Service Enumeration :: HackForge</title>
+    <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html</link>
+    <description>General Service Enumeration Nmap Service Discovery Detect service versions&#xA;nmap -sV $ip Aggressive version detection&#xA;nmap -sV --version-all $ip Scan all ports and detect services&#xA;nmap -p- -sV $ip Run default scripts for enumeration&#xA;nmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service&#xA;nc -v $ip 80 SMTP enumeration&#xA;telnet $ip 25 Get HTTP headers&#xA;curl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

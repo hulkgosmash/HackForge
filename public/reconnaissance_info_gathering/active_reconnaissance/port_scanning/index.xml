@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Port Scanning (Nmap, Masscan) :: HackForge</title>
+    <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html</link>
+    <description>Basic Nmap Scans Quick Scan Basic scan (default 1000 ports)&#xA;nmap $ip Scan all ports&#xA;nmap -p 1-65535 $ip Stealth SYN scan&#xA;nmap -sS $ip Full TCP connection scan&#xA;nmap -sT $ip Aggressive Scan OS, services, and version detection&#xA;nmap -A $ip Aggressive fast scan&#xA;nmap -T4 -A -v $ip Scanning Specific Ports Scan specific ports&#xA;nmap -p 22,80,443 $ip Scan all 65,535 ports</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

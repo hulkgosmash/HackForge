@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Active Reconnaissance :: HackForge</title>
+    <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Port Scanning (Nmap, Masscan)</title>
+      <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/port_scanning/index.html</guid>
+      <description>Basic Nmap Scans Quick Scan Basic scan (default 1000 ports)&#xA;nmap $ip Scan all ports&#xA;nmap -p 1-65535 $ip Stealth SYN scan&#xA;nmap -sS $ip Full TCP connection scan&#xA;nmap -sT $ip Aggressive Scan OS, services, and version detection&#xA;nmap -A $ip Aggressive fast scan&#xA;nmap -T4 -A -v $ip Scanning Specific Ports Scan specific ports&#xA;nmap -p 22,80,443 $ip Scan all 65,535 ports</description>
+    </item>
+    <item>
+      <title>Service Enumeration</title>
+      <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/service_enumeration/index.html</guid>
+      <description>General Service Enumeration Nmap Service Discovery Detect service versions&#xA;nmap -sV $ip Aggressive version detection&#xA;nmap -sV --version-all $ip Scan all ports and detect services&#xA;nmap -p- -sV $ip Run default scripts for enumeration&#xA;nmap -sC -sV $ip Banner Grabbing (Manual) Connect to a web service&#xA;nc -v $ip 80 SMTP enumeration&#xA;telnet $ip 25 Get HTTP headers&#xA;curl -I $ip DNS Enumeration Nmap DNS Enumeration Brute-force subdomains</description>
+    </item>
+    <item>
+      <title>Banner Grabbing</title>
+      <link>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/banner_grabbing/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reconnaissance_info_gathering/active_reconnaissance/banner_grabbing/index.html</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
